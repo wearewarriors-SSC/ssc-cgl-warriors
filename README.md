@@ -22,3 +22,4 @@ Realtime cooperative SSC CGL preparation platform.
 - Chart.js
 - GitHub Pages
 
+Testing auto push
