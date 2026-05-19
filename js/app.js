@@ -32,6 +32,9 @@ import { chat } from './components/chat.js'
 import { profile } from './components/profile.js'
 import { stats } from './components/stats.js'
 import { revision } from './components/revision.js'
+import { arena } from './components/arena.js'
+import { streaks } from './components/streaks.js'
+import { challenges } from './components/challenges.js'
 
 const {
 data
@@ -63,6 +66,9 @@ analytics()
 + profile()
 + stats()
 + revision()
++ arena()
++ streaks()
++ challenges()
 
 window.showTab =
 (id,el) => {

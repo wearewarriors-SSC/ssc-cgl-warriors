@@ -44,6 +44,9 @@ Analytics
 <div class="tab" onclick="showTab('profile',this)">Profile</div>
 <div class="tab" onclick="showTab('stats',this)">Stats</div>
 <div class="tab" onclick="showTab('revision',this)">Revision</div>
+<div class="tab" onclick="showTab('arena',this)">Arena</div>
+<div class="tab" onclick="showTab('streaks',this)">Streaks</div>
+<div class="tab" onclick="showTab('challenges',this)">Challenges</div>
 </div>
 
 <div class="tab"
@@ -56,6 +59,9 @@ Syllabus
 <div class="tab" onclick="showTab('profile',this)">Profile</div>
 <div class="tab" onclick="showTab('stats',this)">Stats</div>
 <div class="tab" onclick="showTab('revision',this)">Revision</div>
+<div class="tab" onclick="showTab('arena',this)">Arena</div>
+<div class="tab" onclick="showTab('streaks',this)">Streaks</div>
+<div class="tab" onclick="showTab('challenges',this)">Challenges</div>
 </div>
 
 </div>
