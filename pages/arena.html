@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        SSC Live Arena
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Live Study Arena
+    </h1>
+
+    <div id="arena"></div>
+
+    <script type="module">
+
+        import {
+            supabase
+        }
+
+        from '../js/config/supabase.js'
+
+        import {
+            renderPresence
+        }
+
+        from '../js/ui/leaderboard.js'
+
+        async function loadArena() {
+
+            const {
+                data
+            } = await supabase
+
+                .from(
+                    'live_presence'
+                )
+
+                .select(`
+                    *,
+                    profiles(username)
+                `)
+
+            const users =
+            (data || []).map(
+                item => ({
+
+                    username:
+                    item.profiles
+                    ?.username ||
+
+                    'Unknown',
+
+                    current_subject:
+                    item.current_subject
+                })
+            )
+
+            renderPresence(
+
+                document.getElementById(
+                    'arena'
+                ),
+
+                users
+            )
+        }
+
+        loadArena()
+
+        supabase
+
+            .channel(
+                'arena-room'
+            )
+
+            .on(
+
+                'postgres_changes',
+
+                {
+
+                    event: '*',
+
+                    schema: 'public',
+
+                    table:
+                    'live_presence'
+                },
+
+                () => {
+
+                    loadArena()
+                }
+            )
+
+            .subscribe()
+
+    </script>
+
+</body>
+
+</html>
