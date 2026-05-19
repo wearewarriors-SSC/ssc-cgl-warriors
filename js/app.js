@@ -35,6 +35,10 @@ import { revision } from './components/revision.js'
 import { arena } from './components/arena.js'
 import { streaks } from './components/streaks.js'
 import { challenges } from './components/challenges.js'
+import { notifications } from './components/notifications.js'
+import { friends } from './components/friends.js'
+import { achievements } from './components/achievements.js'
+import { settings } from './components/settings.js'
 
 const {
 data
@@ -69,6 +73,10 @@ analytics()
 + arena()
 + streaks()
 + challenges()
++ notifications()
++ friends()
++ achievements()
++ settings()
 
 window.showTab =
 (id,el) => {
