@@ -107,6 +107,13 @@ import { smartgoals } from './components/smartgoals.js'
 import { elitezone } from './components/elitezone.js'
 import { poweranalytics } from './components/poweranalytics.js'
 import { ultimatehub } from './components/ultimatehub.js'
+import { systemmonitor } from './components/systemmonitor.js'
+import { warriorai } from './components/warriorai.js'
+import { sessiontracker } from './components/sessiontracker.js'
+import { errorbook } from './components/errorbook.js'
+import { revisionengine } from './components/revisionengine.js'
+import { consistencyengine } from './components/consistencyengine.js'
+import { smartdashboard } from './components/smartdashboard.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -176,6 +183,13 @@ import { smartgoals } from './components/smartgoals.js'
 import { elitezone } from './components/elitezone.js'
 import { poweranalytics } from './components/poweranalytics.js'
 import { ultimatehub } from './components/ultimatehub.js'
+import { systemmonitor } from './components/systemmonitor.js'
+import { warriorai } from './components/warriorai.js'
+import { sessiontracker } from './components/sessiontracker.js'
+import { errorbook } from './components/errorbook.js'
+import { revisionengine } from './components/revisionengine.js'
+import { consistencyengine } from './components/consistencyengine.js'
+import { smartdashboard } from './components/smartdashboard.js'
 
 const {
 data
@@ -279,6 +293,13 @@ analytics()
 + elitezone()
 + poweranalytics()
 + ultimatehub()
++ systemmonitor()
++ warriorai()
++ sessiontracker()
++ errorbook()
++ revisionengine()
++ consistencyengine()
++ smartdashboard()
 + notifications()
 + friends()
 + achievements()
@@ -348,6 +369,13 @@ analytics()
 + elitezone()
 + poweranalytics()
 + ultimatehub()
++ systemmonitor()
++ warriorai()
++ sessiontracker()
++ errorbook()
++ revisionengine()
++ consistencyengine()
++ smartdashboard()
 
 window.showTab =
 (id,el) => {

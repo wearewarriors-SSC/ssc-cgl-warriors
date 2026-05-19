@@ -116,6 +116,13 @@ Analytics
 <div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
 <div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
 <div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
+<div class="tab" onclick="showTab('systemmonitor',this)">System Monitor</div>
+<div class="tab" onclick="showTab('warriorai',this)">Warrior AI</div>
+<div class="tab" onclick="showTab('sessiontracker',this)">Session Tracker</div>
+<div class="tab" onclick="showTab('errorbook',this)">Error Book</div>
+<div class="tab" onclick="showTab('revisionengine',this)">Revision Engine</div>
+<div class="tab" onclick="showTab('consistencyengine',this)">Consistency Engine</div>
+<div class="tab" onclick="showTab('smartdashboard',this)">Smart Dashboard</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -185,6 +192,13 @@ Analytics
 <div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
 <div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
 <div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
+<div class="tab" onclick="showTab('systemmonitor',this)">System Monitor</div>
+<div class="tab" onclick="showTab('warriorai',this)">Warrior AI</div>
+<div class="tab" onclick="showTab('sessiontracker',this)">Session Tracker</div>
+<div class="tab" onclick="showTab('errorbook',this)">Error Book</div>
+<div class="tab" onclick="showTab('revisionengine',this)">Revision Engine</div>
+<div class="tab" onclick="showTab('consistencyengine',this)">Consistency Engine</div>
+<div class="tab" onclick="showTab('smartdashboard',this)">Smart Dashboard</div>
 </div>
 
 <div class="tab"
@@ -269,6 +283,13 @@ Syllabus
 <div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
 <div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
 <div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
+<div class="tab" onclick="showTab('systemmonitor',this)">System Monitor</div>
+<div class="tab" onclick="showTab('warriorai',this)">Warrior AI</div>
+<div class="tab" onclick="showTab('sessiontracker',this)">Session Tracker</div>
+<div class="tab" onclick="showTab('errorbook',this)">Error Book</div>
+<div class="tab" onclick="showTab('revisionengine',this)">Revision Engine</div>
+<div class="tab" onclick="showTab('consistencyengine',this)">Consistency Engine</div>
+<div class="tab" onclick="showTab('smartdashboard',this)">Smart Dashboard</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -338,6 +359,13 @@ Syllabus
 <div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
 <div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
 <div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
+<div class="tab" onclick="showTab('systemmonitor',this)">System Monitor</div>
+<div class="tab" onclick="showTab('warriorai',this)">Warrior AI</div>
+<div class="tab" onclick="showTab('sessiontracker',this)">Session Tracker</div>
+<div class="tab" onclick="showTab('errorbook',this)">Error Book</div>
+<div class="tab" onclick="showTab('revisionengine',this)">Revision Engine</div>
+<div class="tab" onclick="showTab('consistencyengine',this)">Consistency Engine</div>
+<div class="tab" onclick="showTab('smartdashboard',this)">Smart Dashboard</div>
 </div>
 
 </div>
