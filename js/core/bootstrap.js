@@ -22,3 +22,8 @@ console.log(
 )
 
 },500)
+
+import { validateApp }
+from './validator.js'
+
+validateApp()
