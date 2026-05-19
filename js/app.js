@@ -29,6 +29,9 @@ import { notes } from './components/notes.js'
 import { goals } from './components/goals.js'
 import { todos } from './components/todos.js'
 import { chat } from './components/chat.js'
+import { profile } from './components/profile.js'
+import { stats } from './components/stats.js'
+import { revision } from './components/revision.js'
 
 const {
 data
@@ -57,6 +60,9 @@ analytics()
 + goals()
 + todos()
 + chat()
++ profile()
++ stats()
++ revision()
 
 window.showTab =
 (id,el) => {

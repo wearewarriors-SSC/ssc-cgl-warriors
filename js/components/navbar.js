@@ -41,6 +41,9 @@ Analytics
 <div class="tab" onclick="showTab('goals',this)">Goals</div>
 <div class="tab" onclick="showTab('todos',this)">Todos</div>
 <div class="tab" onclick="showTab('chat',this)">Chat</div>
+<div class="tab" onclick="showTab('profile',this)">Profile</div>
+<div class="tab" onclick="showTab('stats',this)">Stats</div>
+<div class="tab" onclick="showTab('revision',this)">Revision</div>
 </div>
 
 <div class="tab"
@@ -50,6 +53,9 @@ Syllabus
 <div class="tab" onclick="showTab('goals',this)">Goals</div>
 <div class="tab" onclick="showTab('todos',this)">Todos</div>
 <div class="tab" onclick="showTab('chat',this)">Chat</div>
+<div class="tab" onclick="showTab('profile',this)">Profile</div>
+<div class="tab" onclick="showTab('stats',this)">Stats</div>
+<div class="tab" onclick="showTab('revision',this)">Revision</div>
 </div>
 
 </div>
