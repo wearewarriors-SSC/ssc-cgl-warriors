@@ -320,3 +320,27 @@ transition:0.3s;
 button:hover{
 box-shadow:0 8px 24px rgba(143,68,255,0.4);
 }
+
+.metric{
+transition:0.4s;
+}
+
+.status{
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+opacity:0.5;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.5;
+}
+
+}
