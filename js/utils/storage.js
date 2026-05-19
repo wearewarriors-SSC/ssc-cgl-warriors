@@ -1,30 +1,39 @@
-export const storage = {
+export function saveLocal(
+    key,
+    value
+) {
 
-    set(key, value) {
+    localStorage.setItem(
+        key,
+        JSON.stringify(value)
+    )
+}
 
-        localStorage.setItem(
-            key,
-            JSON.stringify(value)
-        )
-    },
+export function getLocal(
+    key,
+    fallback = null
+) {
 
-    get(key) {
+    const raw =
+    localStorage.getItem(key)
 
-        const value =
-        localStorage.getItem(key)
-
-        return value
-            ? JSON.parse(value)
-            : null
-    },
-
-    remove(key) {
-
-        localStorage.removeItem(key)
-    },
-
-    clear() {
-
-        localStorage.clear()
+    if (!raw) {
+        return fallback
     }
-}    
+
+    try {
+
+        return JSON.parse(raw)
+
+    } catch {
+
+        return fallback
+    }
+}
+
+export function removeLocal(
+    key
+) {
+
+    localStorage.removeItem(key)
+}
