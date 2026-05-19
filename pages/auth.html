@@ -4,183 +4,155 @@
 
 <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>
-        SSC Warriors Auth
-    </title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
 
-    <link
-        rel="stylesheet"
-        href="../css/dashboard.css"
-    >
+<title>
+SSC Warriors Login
+</title>
+
+<link
+rel="stylesheet"
+href="../css/dashboard.css"
+>
 
 </head>
 
 <body>
 
-    <h1>
-        Login / Signup
-    </h1>
+<div class="auth-container">
 
-    <div class="presence-card">
+<div class="auth-title">
 
-        <input
-            id="email"
-            type="email"
-            placeholder="Email"
-        >
+<h1>
+SSC Warriors
+</h1>
 
-        <br><br>
+<p class="auth-subtitle">
 
-        <input
-            id="password"
-            type="password"
-            placeholder="Password"
-        >
+Realtime SSC CGL preparation ecosystem
 
-        <br><br>
+</p>
 
-        <button id="signupBtn">
-            Sign Up
-        </button>
+</div>
 
-        <button id="loginBtn">
-            Login
-        </button>
+<div class="presence-card">
 
-        <button id="logoutBtn">
-            Logout
-        </button>
+<input
+id="email"
+type="email"
+placeholder="Enter email"
+>
 
-    </div>
+<input
+id="password"
+type="password"
+placeholder="Enter password"
+>
 
-    <div id="status"></div>
+<button id="signupBtn">
+Sign Up
+</button>
 
-    <script type="module">
-import { showToast } from '../js/ui/toast.js'
-import { applyAppShell } from '../js/ui/appShell.js'
-applyAppShell()
+<button id="loginBtn">
+Login
+</button>
 
-        import {
-            supabase
-        }
+</div>
 
-        from '../js/config/supabase.js'
+</div>
 
-        const status =
-        document.getElementById(
-            'status'
-        )
+<script type="module">
 
-        async function signUp() {
+import {
+supabase
+}
+from '../js/config/supabase.js'
 
-            const email =
-            document
-            .getElementById(
-                'email'
-            ).value
+async function signup() {
 
-            const password =
-            document
-            .getElementById(
-                'password'
-            ).value
+const email =
+document.getElementById(
+'email'
+).value
 
-            const {
-                error
-            } = await supabase.auth
-                .signUp({
+const password =
+document.getElementById(
+'password'
+).value
 
-                    email,
-                    password
-                })
+const {
+error
+} = await supabase.auth.signUp({
 
-            if (error) {
+email,
+password
 
-                status.innerHTML =
-                error.message
+})
 
-                return
-            }
+if(error){
 
-            status.innerHTML =
-            'Signup successful'
-        }
+alert(error.message)
 
-        async function login() {
+return
+}
 
-            const email =
-            document
-            .getElementById(
-                'email'
-            ).value
+alert(
+'Signup successful'
+)
+}
 
-            const password =
-            document
-            .getElementById(
-                'password'
-            ).value
+async function login() {
 
-            const {
-                error
-            } = await supabase.auth
-                .signInWithPassword({
+const email =
+document.getElementById(
+'email'
+).value
 
-                    email,
-                    password
-                })
+const password =
+document.getElementById(
+'password'
+).value
 
-            if (error) {
+const {
+error
+} = await supabase.auth.signInWithPassword({
 
-                status.innerHTML =
-                error.message
+email,
+password
 
-                return
-            }
+})
 
-            location.href =
-            './dashboard.html'
-        }
+if(error){
 
-        async function logout() {
+alert(error.message)
 
-            await supabase.auth
-                .signOut()
+return
+}
 
-            status.innerHTML =
-            'Logged out'
-        }
+window.location.href =
+'./dashboard.html'
+}
 
-        document
-        .getElementById(
-            'signupBtn'
-        )
+document
+.getElementById(
+'signupBtn'
+)
 
-        .addEventListener(
-            'click',
-            signUp
-        )
+.onclick =
+signup
 
-        document
-        .getElementById(
-            'loginBtn'
-        )
+document
+.getElementById(
+'loginBtn'
+)
 
-        .addEventListener(
-            'click',
-            login
-        )
+.onclick =
+login
 
-        document
-        .getElementById(
-            'logoutBtn'
-        )
-
-        .addEventListener(
-            'click',
-            logout
-        )
-
-    </script>
+</script>
 
 </body>
 
