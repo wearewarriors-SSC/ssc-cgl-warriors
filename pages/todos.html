@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo Manager</title>
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<h1>Daily Todo Manager</h1>
+
+<input
+id="todoInput"
+placeholder="Add task"
+>
+
+<button id="todoBtn">
+Add Task
+</button>
+
+<div id="todos"></div>
+
+<script type="module">
+
+import {
+requireAuth
+}
+from '../js/auth/session.js'
+
+import {
+supabase
+}
+from '../js/config/supabase.js'
+
+const user =
+await requireAuth()
+
+async function loadTodos() {
+
+const {
+data
+} = await supabase
+
+.from('todos')
+
+.select('*')
+
+.eq(
+'user_email',
+user.email
+)
+
+const container =
+document.getElementById(
+'todos'
+)
+
+container.innerHTML = ''
+
+data.forEach(todo => {
+
+const card =
+document.createElement('div')
+
+card.className =
+'presence-card'
+
+card.innerHTML = `
+
+✅ ${todo.task}
+
+`
+
+container.appendChild(card)
+
+})
+}
+
+document
+.getElementById(
+'todoBtn'
+)
+
+.addEventListener(
+
+'click',
+
+async () => {
+
+await supabase
+
+.from('todos')
+
+.insert([{
+
+user_email:
+user.email,
+
+task:
+document
+.getElementById(
+'todoInput'
+).value
+
+}])
+
+document
+.getElementById(
+'todoInput'
+).value = ''
+
+loadTodos()
+
+}
+)
+
+loadTodos()
+
+</script>
+
+</body>
+</html>
