@@ -85,3 +85,84 @@ button {
     background:
     #7c3aed;
 }
+
+.topbar {
+
+    display: flex;
+
+    justify-content:
+    space-between;
+
+    align-items: center;
+
+    padding: 16px 24px;
+
+    background:
+    #111827;
+
+    border-radius: 18px;
+
+    margin-bottom: 20px;
+}
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.top-links {
+
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.top-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    background:
+    #374151;
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+}
+
+.top-links a:hover {
+
+    background:
+    #4f46e5;
+}
+
+@media (
+    max-width: 768px
+) {
+
+    .topbar {
+
+        flex-direction:
+        column;
+
+        gap: 14px;
+    }
+
+    .nav-grid {
+
+        grid-template-columns:
+        1fr;
+    }
+
+    body {
+
+        padding: 12px;
+    }
+}
