@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Profile
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        My Profile
+    </h1>
+
+    <input
+        id="username"
+        placeholder="Username"
+    >
+
+    <br><br>
+
+    <textarea
+        id="bio"
+        placeholder="Bio"
+    ></textarea>
+
+    <br><br>
+
+    <input
+        id="targetRank"
+        placeholder="Target Rank"
+    >
+
+    <br><br>
+
+    <button id="saveBtn">
+        Save Profile
+    </button>
+
+    <div id="profileView"></div>
+
+    <script type="module">
+
+        import {
+            requireAuth
+        }
+
+        from '../js/auth/session.js'
+
+        import {
+            saveProfile,
+            getProfile
+        }
+
+        from '../js/database/profile.js'
+
+        const user =
+        await requireAuth()
+
+        async function loadProfile() {
+
+            const profile =
+            await getProfile(
+                user.email
+            )
+
+            if (!profile) {
+                return
+            }
+
+            document
+            .getElementById(
+                'profileView'
+            )
+
+            .innerHTML = `
+
+                <div class="presence-card">
+
+                    <h2>
+                        ${profile.username}
+                    </h2>
+
+                    <br>
+
+                    ${profile.bio}
+
+                    <br><br>
+
+                    🎯 Target:
+
+                    ${profile.target_rank}
+
+                </div>
+            `
+        }
+
+        document
+        .getElementById(
+            'saveBtn'
+        )
+
+        .addEventListener(
+
+            'click',
+
+            async () => {
+
+                await saveProfile({
+
+                    user_email:
+                    user.email,
+
+                    username:
+                    document
+                    .getElementById(
+                        'username'
+                    ).value,
+
+                    bio:
+                    document
+                    .getElementById(
+                        'bio'
+                    ).value,
+
+                    target_rank:
+                    document
+                    .getElementById(
+                        'targetRank'
+                    ).value
+                })
+
+                loadProfile()
+            }
+        )
+
+        loadProfile()
+
+    </script>
+
+</body>
+
+</html>
