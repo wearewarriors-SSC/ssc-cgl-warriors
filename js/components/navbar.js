@@ -67,6 +67,12 @@ Analytics
 <div class="tab" onclick="showTab('store',this)">Store</div>
 <div class="tab" onclick="showTab('themes',this)">Themes</div>
 <div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
+<div class="tab" onclick="showTab('roadmap',this)">Roadmap</div>
+<div class="tab" onclick="showTab('habits',this)">Habits</div>
+<div class="tab" onclick="showTab('mockanalysis',this)">Mock Analysis</div>
+<div class="tab" onclick="showTab('productivity',this)">Productivity</div>
+<div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
+<div class="tab" onclick="showTab('competition',this)">Competition</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -87,6 +93,12 @@ Analytics
 <div class="tab" onclick="showTab('store',this)">Store</div>
 <div class="tab" onclick="showTab('themes',this)">Themes</div>
 <div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
+<div class="tab" onclick="showTab('roadmap',this)">Roadmap</div>
+<div class="tab" onclick="showTab('habits',this)">Habits</div>
+<div class="tab" onclick="showTab('mockanalysis',this)">Mock Analysis</div>
+<div class="tab" onclick="showTab('productivity',this)">Productivity</div>
+<div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
+<div class="tab" onclick="showTab('competition',this)">Competition</div>
 </div>
 
 <div class="tab"
@@ -122,6 +134,12 @@ Syllabus
 <div class="tab" onclick="showTab('store',this)">Store</div>
 <div class="tab" onclick="showTab('themes',this)">Themes</div>
 <div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
+<div class="tab" onclick="showTab('roadmap',this)">Roadmap</div>
+<div class="tab" onclick="showTab('habits',this)">Habits</div>
+<div class="tab" onclick="showTab('mockanalysis',this)">Mock Analysis</div>
+<div class="tab" onclick="showTab('productivity',this)">Productivity</div>
+<div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
+<div class="tab" onclick="showTab('competition',this)">Competition</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -142,6 +160,12 @@ Syllabus
 <div class="tab" onclick="showTab('store',this)">Store</div>
 <div class="tab" onclick="showTab('themes',this)">Themes</div>
 <div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
+<div class="tab" onclick="showTab('roadmap',this)">Roadmap</div>
+<div class="tab" onclick="showTab('habits',this)">Habits</div>
+<div class="tab" onclick="showTab('mockanalysis',this)">Mock Analysis</div>
+<div class="tab" onclick="showTab('productivity',this)">Productivity</div>
+<div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
+<div class="tab" onclick="showTab('competition',this)">Competition</div>
 </div>
 
 </div>

@@ -55,6 +55,12 @@ import { battles } from './components/battles.js'
 import { store } from './components/store.js'
 import { themes } from './components/themes.js'
 import { focusmusic } from './components/focusmusic.js'
+import { roadmap } from './components/roadmap.js'
+import { habits } from './components/habits.js'
+import { mockanalysis } from './components/mockanalysis.js'
+import { productivity } from './components/productivity.js'
+import { revisiontracker } from './components/revisiontracker.js'
+import { competition } from './components/competition.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -75,6 +81,12 @@ import { battles } from './components/battles.js'
 import { store } from './components/store.js'
 import { themes } from './components/themes.js'
 import { focusmusic } from './components/focusmusic.js'
+import { roadmap } from './components/roadmap.js'
+import { habits } from './components/habits.js'
+import { mockanalysis } from './components/mockanalysis.js'
+import { productivity } from './components/productivity.js'
+import { revisiontracker } from './components/revisiontracker.js'
+import { competition } from './components/competition.js'
 
 const {
 data
@@ -129,6 +141,12 @@ analytics()
 + store()
 + themes()
 + focusmusic()
++ roadmap()
++ habits()
++ mockanalysis()
++ productivity()
++ revisiontracker()
++ competition()
 + notifications()
 + friends()
 + achievements()
@@ -149,6 +167,12 @@ analytics()
 + store()
 + themes()
 + focusmusic()
++ roadmap()
++ habits()
++ mockanalysis()
++ productivity()
++ revisiontracker()
++ competition()
 
 window.showTab =
 (id,el) => {
