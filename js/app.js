@@ -1,3 +1,4 @@
+import { renderChart } from './charts.js'
 import { loadMessages, subscribeChat } from './live.js'
 import { saveNote, addGoal, sendMessage, saveMock } from './realtime.js'
 import {
@@ -88,6 +89,10 @@ import { finalrevision } from './components/finalrevision.js'
 import { livefeed } from './components/livefeed.js'
 import { userstats } from './components/userstats.js'
 import { globalchat } from './components/globalchat.js'
+import { realtimedashboard } from './components/realtimedashboard.js'
+import { activityfeed } from './components/activityfeed.js'
+import { xpsystem } from './components/xpsystem.js'
+import { studygraph } from './components/studygraph.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -139,6 +144,10 @@ import { finalrevision } from './components/finalrevision.js'
 import { livefeed } from './components/livefeed.js'
 import { userstats } from './components/userstats.js'
 import { globalchat } from './components/globalchat.js'
+import { realtimedashboard } from './components/realtimedashboard.js'
+import { activityfeed } from './components/activityfeed.js'
+import { xpsystem } from './components/xpsystem.js'
+import { studygraph } from './components/studygraph.js'
 
 const {
 data
@@ -224,6 +233,10 @@ analytics()
 + livefeed()
 + userstats()
 + globalchat()
++ realtimedashboard()
++ activityfeed()
++ xpsystem()
++ studygraph()
 + notifications()
 + friends()
 + achievements()
@@ -275,6 +288,10 @@ analytics()
 + livefeed()
 + userstats()
 + globalchat()
++ realtimedashboard()
++ activityfeed()
++ xpsystem()
++ studygraph()
 
 window.showTab =
 (id,el) => {
@@ -394,3 +411,42 @@ input.value = ''
 }
 
 initializeGlobalChat()
+
+setTimeout(()=>{
+
+renderChart()
+
+},500)
+
+const realtimeBox =
+document.getElementById(
+'realtimeStats'
+)
+
+if(realtimeBox){
+
+realtimeBox.innerHTML = `
+
+<p>🔥 42 Active Focus Sessions</p>
+<p>⚡ 128 Warriors Online</p>
+<p>📚 842 Study Hours Today</p>
+
+`
+}
+
+const activityContainer =
+document.getElementById(
+'activityContainer'
+)
+
+if(activityContainer){
+
+activityContainer.innerHTML = `
+
+<p>🔥 Rahul completed Mock Test</p>
+<p>⚡ Priya entered Focus Room</p>
+<p>🏆 Aman reached 15 day streak</p>
+<p>📚 Ajay revised Algebra</p>
+
+`
+}

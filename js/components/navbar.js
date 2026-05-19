@@ -98,6 +98,10 @@ Analytics
 <div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
 <div class="tab" onclick="showTab('userstats',this)">User Stats</div>
 <div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
+<div class="tab" onclick="showTab('realtimedashboard',this)">Realtime Dashboard</div>
+<div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
+<div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
+<div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -149,6 +153,10 @@ Analytics
 <div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
 <div class="tab" onclick="showTab('userstats',this)">User Stats</div>
 <div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
+<div class="tab" onclick="showTab('realtimedashboard',this)">Realtime Dashboard</div>
+<div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
+<div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
+<div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
 </div>
 
 <div class="tab"
@@ -215,6 +223,10 @@ Syllabus
 <div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
 <div class="tab" onclick="showTab('userstats',this)">User Stats</div>
 <div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
+<div class="tab" onclick="showTab('realtimedashboard',this)">Realtime Dashboard</div>
+<div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
+<div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
+<div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -266,6 +278,10 @@ Syllabus
 <div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
 <div class="tab" onclick="showTab('userstats',this)">User Stats</div>
 <div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
+<div class="tab" onclick="showTab('realtimedashboard',this)">Realtime Dashboard</div>
+<div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
+<div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
+<div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
 </div>
 
 </div>
