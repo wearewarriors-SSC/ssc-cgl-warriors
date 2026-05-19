@@ -1,212 +1,288 @@
-* {
-
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
+body{
 
-background: #0f172a;
-color: #f8fafc;
-font-family: Inter, Arial, sans-serif;
-min-height: 100vh;
-padding: 20px;
-line-height: 1.5;
+font-family:Inter,Arial,sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#020617,
+#0f172a
+);
+
+color:#f8fafc;
+
+min-height:100vh;
+
+padding:20px;
+
+line-height:1.5;
 }
 
-h1 {
+h1{
 
-font-size: 28px;
-margin-bottom: 20px;
-font-weight: 700;
+font-size:32px;
+font-weight:800;
+
+margin-bottom:20px;
 }
 
-h2 {
+h2{
 
-font-size: 20px;
-margin-bottom: 12px;
+font-size:20px;
+
+margin-bottom:14px;
+
+font-weight:700;
 }
 
-a {
+h3{
 
-text-decoration: none;
-color: inherit;
+margin-bottom:10px;
 }
 
-.nav-grid {
+a{
 
-display: grid;
+text-decoration:none;
+color:white;
+}
+
+.nav-grid{
+
+display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(160px,1fr));
+repeat(auto-fit,minmax(180px,1fr));
 
-gap: 14px;
+gap:16px;
 
-margin-top: 20px;
+margin-top:20px;
 }
 
-.nav-grid a {
+.nav-grid a{
 
-background: #1e293b;
+background:
+rgba(255,255,255,0.06);
 
-padding: 18px;
+backdrop-filter:blur(14px);
 
-border-radius: 16px;
+border:
+1px solid rgba(255,255,255,0.08);
 
-text-align: center;
+padding:18px;
 
-font-weight: 600;
+border-radius:20px;
 
-transition: 0.2s;
+text-align:center;
+
+font-weight:600;
+
+transition:0.2s;
 }
 
-.nav-grid a:hover {
+.nav-grid a:hover{
 
-background: #334155;
+transform:translateY(-3px);
 
-transform: translateY(-2px);
+background:
+rgba(255,255,255,0.1);
 }
 
-.presence-card {
+.presence-card,
+.card{
 
-background: #1e293b;
+background:
+rgba(255,255,255,0.06);
 
-padding: 20px;
+backdrop-filter:blur(14px);
 
-border-radius: 18px;
+border:
+1px solid rgba(255,255,255,0.08);
 
-margin-top: 18px;
+padding:22px;
+
+border-radius:24px;
+
+margin-top:18px;
 
 box-shadow:
-0 4px 20px rgba(0,0,0,0.25);
+0 8px 30px rgba(0,0,0,0.25);
 }
 
 input,
 textarea,
-button {
+select{
 
-width: 100%;
+width:100%;
 
-padding: 14px;
+padding:14px;
 
-margin-top: 12px;
+margin-top:10px;
 
-border: none;
+border:none;
 
-border-radius: 14px;
+border-radius:16px;
 
-font-size: 15px;
+background:
+rgba(255,255,255,0.08);
+
+color:white;
+
+font-size:15px;
+
+outline:none;
 }
 
-input,
-textarea {
+button{
 
-background: #334155;
+padding:14px 18px;
 
-color: white;
+border:none;
+
+border-radius:16px;
+
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#9333ea
+);
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+margin-top:12px;
+
+transition:0.2s;
 }
 
-button {
+button:hover{
 
-background: #6366f1;
+transform:translateY(-2px);
 
-color: white;
-
-font-weight: 600;
-
-cursor: pointer;
-
-transition: 0.2s;
+opacity:0.92;
 }
 
-button:hover {
+canvas{
 
-background: #818cf8;
+background:white;
+
+border-radius:20px;
+
+padding:10px;
+
+margin-top:18px;
+
+max-width:100%;
 }
 
-canvas {
+.metric{
 
-margin-top: 20px;
+font-size:42px;
 
-background: white;
+font-weight:800;
 
-border-radius: 16px;
+background:
+linear-gradient(
+135deg,
+#818cf8,
+#c084fc
+);
 
-padding: 10px;
-
-max-width: 100%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.logout-btn {
+.tabs{
 
-position: fixed;
+display:flex;
 
-top: 20px;
+gap:12px;
 
-right: 20px;
+overflow-x:auto;
 
-width: auto;
+margin-bottom:20px;
 
-padding: 12px 18px;
-
-background: #ef4444;
-
-z-index: 999;
+padding-bottom:10px;
 }
 
-.auth-container {
+.tab{
 
-max-width: 420px;
+padding:12px 18px;
 
-margin: auto;
+border-radius:16px;
 
-margin-top: 8vh;
+background:
+rgba(255,255,255,0.06);
+
+cursor:pointer;
+
+white-space:nowrap;
 }
 
-.auth-title {
+.tab.active{
 
-text-align: center;
-
-margin-bottom: 30px;
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#9333ea
+);
 }
 
-.auth-subtitle {
+.logout-btn{
 
-opacity: 0.7;
+position:fixed;
 
-margin-top: 8px;
+top:20px;
+right:20px;
 
-font-size: 14px;
+background:#ef4444;
+
+z-index:999;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar{
 
-width: 8px;
+width:8px;
+height:8px;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb{
 
-background: #475569;
+background:#475569;
 
-border-radius: 10px;
+border-radius:20px;
 }
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-body {
+body{
 
-padding: 14px;
+padding:14px;
 }
 
-.nav-grid {
+h1{
+
+font-size:24px;
+}
+
+.metric{
+
+font-size:32px;
+}
+
+.nav-grid{
 
 grid-template-columns:
 1fr 1fr;
-}
-
-h1 {
-
-font-size: 24px;
 }
 }
