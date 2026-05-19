@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<h1>Global Platform Stats</h1>
+
+<div id="stats"></div>
+
+<script type="module">
+
+import {
+supabase
+}
+from '../js/config/supabase.js'
+
+const [
+sessions,
+users,
+groups
+] = await Promise.all([
+
+supabase
+.from('sessions')
+.select('*'),
+
+supabase
+.from('user_profiles')
+.select('*'),
+
+supabase
+.from('study_groups')
+.select('*')
+
+])
+
+document
+.getElementById(
+'stats'
+)
+
+.innerHTML = `
+
+<div class="presence-card">
+
+👥 Users:
+${users.data.length}
+
+<br><br>
+
+📚 Sessions:
+${sessions.data.length}
+
+<br><br>
+
+🏠 Groups:
+${groups.data.length}
+
+</div>
+
+`
+
+</script>
+
+</body>
+</html>

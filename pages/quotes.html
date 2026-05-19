@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Daily Motivation</title>
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<h1>Daily Motivation</h1>
+
+<div id="quotes"></div>
+
+<script type="module">
+
+import {
+supabase
+}
+from '../js/config/supabase.js'
+
+const {
+data
+} = await supabase
+
+.from('daily_quotes')
+
+.select('*')
+
+.order(
+'created_at',
+{
+ascending:false
+}
+)
+
+const container =
+document.getElementById(
+'quotes'
+)
+
+data.forEach(item => {
+
+const card =
+document.createElement('div')
+
+card.className =
+'presence-card'
+
+card.innerHTML =
+`✨ ${item.quote}`
+
+container.appendChild(card)
+
+})
+
+</script>
+
+</body>
+</html>
