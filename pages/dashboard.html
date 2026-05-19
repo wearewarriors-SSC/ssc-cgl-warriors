@@ -56,6 +56,12 @@
 
         from '../js/charts/performanceChart.js'
 
+        import {
+            buildWeeklyMinutes
+        }
+
+        from '../js/utils/chartData.js'
+
         const user =
         await requireAuth()
 
@@ -79,7 +85,7 @@
             </div>
         `
 
-        async function loadStats() {
+        async function loadDashboard() {
 
             const sessions =
             await getSessions(
@@ -118,6 +124,22 @@
 
                 </div>
             `
+
+            const weekly =
+            buildWeeklyMinutes(
+                sessions
+            )
+
+            buildPerformanceChart(
+
+                document.getElementById(
+                    'performanceChart'
+                ),
+
+                weekly.labels,
+
+                weekly.data
+            )
         }
 
         document
@@ -143,34 +165,11 @@
                     'Study Session'
                 })
 
-                loadStats()
+                loadDashboard()
             }
         )
 
-        await loadStats()
-
-        buildPerformanceChart(
-
-            document.getElementById(
-                'performanceChart'
-            ),
-
-            [
-                'Mon',
-                'Tue',
-                'Wed',
-                'Thu',
-                'Fri'
-            ],
-
-            [
-                50,
-                60,
-                70,
-                80,
-                90
-            ]
-        )
+        await loadDashboard()
 
     </script>
 
