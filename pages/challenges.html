@@ -24,6 +24,7 @@
     <div id="challenges"></div>
 
     <script type="module">
+import { showToast } from '../js/ui/toast.js'
 import { applyAppShell } from '../js/ui/appShell.js'
 applyAppShell()
 
@@ -108,7 +109,7 @@ applyAppShell()
                                 true
                             })
 
-                            alert(
+                            showToast(
                                 'Challenge completed!'
                             )
                         }

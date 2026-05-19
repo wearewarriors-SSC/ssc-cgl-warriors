@@ -141,3 +141,30 @@ grid-template-columns:
 1fr 1fr;
 }
 }
+
+::-webkit-scrollbar {
+
+width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+
+background: #475569;
+border-radius: 10px;
+}
+
+.presence-card {
+
+word-wrap: break-word;
+}
+
+img {
+
+max-width: 100%;
+}
+
+body {
+
+max-width: 1400px;
+margin: auto;
+}
