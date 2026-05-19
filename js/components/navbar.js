@@ -73,6 +73,12 @@ Analytics
 <div class="tab" onclick="showTab('productivity',this)">Productivity</div>
 <div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
 <div class="tab" onclick="showTab('competition',this)">Competition</div>
+<div class="tab" onclick="showTab('mentor',this)">Mentor</div>
+<div class="tab" onclick="showTab('dailyplanner',this)">Planner</div>
+<div class="tab" onclick="showTab('weeklyreport',this)">Reports</div>
+<div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
+<div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
+<div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -99,6 +105,12 @@ Analytics
 <div class="tab" onclick="showTab('productivity',this)">Productivity</div>
 <div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
 <div class="tab" onclick="showTab('competition',this)">Competition</div>
+<div class="tab" onclick="showTab('mentor',this)">Mentor</div>
+<div class="tab" onclick="showTab('dailyplanner',this)">Planner</div>
+<div class="tab" onclick="showTab('weeklyreport',this)">Reports</div>
+<div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
+<div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
+<div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
 </div>
 
 <div class="tab"
@@ -140,6 +152,12 @@ Syllabus
 <div class="tab" onclick="showTab('productivity',this)">Productivity</div>
 <div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
 <div class="tab" onclick="showTab('competition',this)">Competition</div>
+<div class="tab" onclick="showTab('mentor',this)">Mentor</div>
+<div class="tab" onclick="showTab('dailyplanner',this)">Planner</div>
+<div class="tab" onclick="showTab('weeklyreport',this)">Reports</div>
+<div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
+<div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
+<div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -166,6 +184,12 @@ Syllabus
 <div class="tab" onclick="showTab('productivity',this)">Productivity</div>
 <div class="tab" onclick="showTab('revisiontracker',this)">Revision Tracker</div>
 <div class="tab" onclick="showTab('competition',this)">Competition</div>
+<div class="tab" onclick="showTab('mentor',this)">Mentor</div>
+<div class="tab" onclick="showTab('dailyplanner',this)">Planner</div>
+<div class="tab" onclick="showTab('weeklyreport',this)">Reports</div>
+<div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
+<div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
+<div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
 </div>
 
 </div>

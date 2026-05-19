@@ -61,6 +61,12 @@ import { mockanalysis } from './components/mockanalysis.js'
 import { productivity } from './components/productivity.js'
 import { revisiontracker } from './components/revisiontracker.js'
 import { competition } from './components/competition.js'
+import { mentor } from './components/mentor.js'
+import { dailyplanner } from './components/dailyplanner.js'
+import { weeklyreport } from './components/weeklyreport.js'
+import { examstrategy } from './components/examstrategy.js'
+import { rankpredictor } from './components/rankpredictor.js'
+import { focusstats } from './components/focusstats.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -87,6 +93,12 @@ import { mockanalysis } from './components/mockanalysis.js'
 import { productivity } from './components/productivity.js'
 import { revisiontracker } from './components/revisiontracker.js'
 import { competition } from './components/competition.js'
+import { mentor } from './components/mentor.js'
+import { dailyplanner } from './components/dailyplanner.js'
+import { weeklyreport } from './components/weeklyreport.js'
+import { examstrategy } from './components/examstrategy.js'
+import { rankpredictor } from './components/rankpredictor.js'
+import { focusstats } from './components/focusstats.js'
 
 const {
 data
@@ -147,6 +159,12 @@ analytics()
 + productivity()
 + revisiontracker()
 + competition()
++ mentor()
++ dailyplanner()
++ weeklyreport()
++ examstrategy()
++ rankpredictor()
++ focusstats()
 + notifications()
 + friends()
 + achievements()
@@ -173,6 +191,12 @@ analytics()
 + productivity()
 + revisiontracker()
 + competition()
++ mentor()
++ dailyplanner()
++ weeklyreport()
++ examstrategy()
++ rankpredictor()
++ focusstats()
 
 window.showTab =
 (id,el) => {
