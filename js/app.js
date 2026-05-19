@@ -39,10 +39,18 @@ import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
 import { settings } from './components/settings.js'
+import { pyq } from './components/pyq.js'
+import { weaktopics } from './components/weaktopics.js'
+import { history } from './components/history.js'
+import { rankings } from './components/rankings.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
 import { settings } from './components/settings.js'
+import { pyq } from './components/pyq.js'
+import { weaktopics } from './components/weaktopics.js'
+import { history } from './components/history.js'
+import { rankings } from './components/rankings.js'
 
 const {
 data
@@ -81,10 +89,18 @@ analytics()
 + friends()
 + achievements()
 + settings()
++ pyq()
++ weaktopics()
++ history()
++ rankings()
 + notifications()
 + friends()
 + achievements()
 + settings()
++ pyq()
++ weaktopics()
++ history()
++ rankings()
 
 window.showTab =
 (id,el) => {

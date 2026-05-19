@@ -51,10 +51,18 @@ Analytics
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
 <div class="tab" onclick="showTab('settings',this)">Settings</div>
+<div class="tab" onclick="showTab('pyq',this)">PYQ</div>
+<div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
+<div class="tab" onclick="showTab('history',this)">History</div>
+<div class="tab" onclick="showTab('rankings',this)">Rankings</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
 <div class="tab" onclick="showTab('settings',this)">Settings</div>
+<div class="tab" onclick="showTab('pyq',this)">PYQ</div>
+<div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
+<div class="tab" onclick="showTab('history',this)">History</div>
+<div class="tab" onclick="showTab('rankings',this)">Rankings</div>
 </div>
 
 <div class="tab"
@@ -74,10 +82,18 @@ Syllabus
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
 <div class="tab" onclick="showTab('settings',this)">Settings</div>
+<div class="tab" onclick="showTab('pyq',this)">PYQ</div>
+<div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
+<div class="tab" onclick="showTab('history',this)">History</div>
+<div class="tab" onclick="showTab('rankings',this)">Rankings</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
 <div class="tab" onclick="showTab('settings',this)">Settings</div>
+<div class="tab" onclick="showTab('pyq',this)">PYQ</div>
+<div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
+<div class="tab" onclick="showTab('history',this)">History</div>
+<div class="tab" onclick="showTab('rankings',this)">Rankings</div>
 </div>
 
 </div>
