@@ -2,50 +2,68 @@ export function mocks(){
 
 return `
 
-<div
-id="mocks"
-class="section"
->
+<div id="mocks" class="section">
 
 <div class="grid">
 
-<div class="card">
+<div class="card sidebar">
 
 <h2>
-Mock Logger
+Submit Mark Sheet
 </h2>
+
+<div class="toggle-group">
+
+<button>Tier 1</button>
+<button>Tier 2</button>
+<button>Sectional</button>
+
+</div>
 
 <input placeholder="Mock Name"/>
 
-<input placeholder="Quant Score"/>
+<input type="number" placeholder="Quant"/>
+<input type="number" placeholder="Reasoning"/>
+<input type="number" placeholder="English"/>
+<input type="number" placeholder="GA"/>
 
-<input placeholder="Reasoning Score"/>
+<div class="metric">
+0 / 200
+</div>
 
-<input placeholder="English Score"/>
-
-<input placeholder="GA Score"/>
-
-<button
-style="margin-top:18px"
->
-Save Mock
+<button>
+Commit Mark Sheet
 </button>
 
 </div>
 
-<div class="card">
+<div class="card large">
 
 <h2>
-Latest Performance
+Performance Tracking Feed
 </h2>
 
-<div class="metric">
-142
-</div>
+<table>
 
-<p>
-Latest Combined Score
-</p>
+<tr>
+<th>Mock</th>
+<th>Tier</th>
+<th>Total</th>
+</tr>
+
+<tr>
+<td>Oliveboard 43</td>
+<td>Tier 1</td>
+<td>142</td>
+</tr>
+
+<tr>
+<td>Testbook 12</td>
+<td>Tier 1</td>
+<td>151</td>
+</tr>
+
+</table>
 
 </div>
 
