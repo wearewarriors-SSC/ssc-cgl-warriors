@@ -8,33 +8,21 @@ export function renderPresence(
     users.forEach(user => {
 
         const card =
-        document.createElement(
-            'div'
-        )
+        document.createElement('div')
 
         card.className =
         'presence-card'
 
         card.innerHTML = `
-
-            <div class="dot"></div>
-
             <div>
-
-                <h3>
-                    ${user.username}
-                </h3>
-
-                <p>
-                    ${user.current_subject}
-                </p>
-
+                🟢 ${user.username}
             </div>
 
+            <small>
+                ${user.current_subject}
+            </small>
         `
 
-        container.appendChild(
-            card
-        )
+        container.appendChild(card)
     })
 }
