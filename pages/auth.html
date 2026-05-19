@@ -1,65 +1,289 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8"/>
 
 <meta
 name="viewport"
 content="width=device-width, initial-scale=1.0"
->
+/>
 
 <title>
 SSC Warriors Login
 </title>
 
 <link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
 rel="stylesheet"
-href="../css/dashboard.css"
->
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+radial-gradient(circle at top right,#7c3aed,transparent 25%),
+radial-gradient(circle at bottom left,#2563eb,transparent 25%),
+#020617;
+
+overflow:hidden;
+color:white;
+}
+
+.card{
+
+width:100%;
+max-width:430px;
+
+padding:42px;
+
+border-radius:32px;
+
+background:
+rgba(15,23,42,0.72);
+
+backdrop-filter:blur(22px);
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+box-shadow:
+0 8px 32px rgba(0,0,0,0.45);
+}
+
+.logo{
+
+width:70px;
+height:70px;
+
+margin:auto;
+margin-bottom:24px;
+
+border-radius:22px;
+
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#9333ea
+);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:32px;
+font-weight:800;
+}
+
+h1{
+
+font-size:42px;
+font-weight:800;
+
+text-align:center;
+margin-bottom:10px;
+}
+
+.subtitle{
+
+text-align:center;
+opacity:0.7;
+margin-bottom:34px;
+}
+
+.input-group{
+
+margin-bottom:22px;
+}
+
+label{
+
+display:block;
+margin-bottom:10px;
+font-size:14px;
+font-weight:600;
+}
+
+input{
+
+width:100%;
+
+padding:16px 18px;
+
+border-radius:16px;
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+background:
+rgba(255,255,255,0.05);
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:0.2s;
+}
+
+input:focus{
+
+border-color:#8b5cf6;
+
+box-shadow:
+0 0 0 4px rgba(139,92,246,0.15);
+}
+
+button{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:16px;
+font-weight:700;
+
+cursor:pointer;
+
+transition:0.2s;
+
+margin-top:8px;
+}
+
+.login-btn{
+
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#9333ea
+);
+
+color:white;
+}
+
+.login-btn:hover{
+
+transform:translateY(-2px);
+
+opacity:0.92;
+}
+
+.signup-btn{
+
+background:
+rgba(255,255,255,0.08);
+
+color:white;
+
+margin-top:14px;
+}
+
+.signup-btn:hover{
+
+background:
+rgba(255,255,255,0.14);
+}
+
+.footer{
+
+margin-top:28px;
+
+text-align:center;
+
+font-size:13px;
+
+opacity:0.65;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="auth-container">
+<div class="card">
 
-<div class="auth-title">
+<div class="logo">
+⚔️
+</div>
 
 <h1>
-SSC Warriors
+Welcome
 </h1>
 
-<p class="auth-subtitle">
-
-Realtime SSC CGL preparation ecosystem
-
+<p class="subtitle">
+SSC CGL Warriors Arena
 </p>
+
+<div class="input-group">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+/>
 
 </div>
 
-<div class="presence-card">
+<div class="input-group">
+
+<label>
+Password
+</label>
 
 <input
-id="email"
-type="email"
-placeholder="Enter email"
->
-
-<input
-id="password"
 type="password"
-placeholder="Enter password"
+id="password"
+placeholder="Enter your password"
+/>
+
+</div>
+
+<button
+class="login-btn"
+onclick="login()"
 >
-
-<button id="signupBtn">
-Sign Up
+Sign In
 </button>
 
-<button id="loginBtn">
-Login
+<button
+class="signup-btn"
+onclick="signup()"
+>
+Create Account
 </button>
 
+<div class="footer">
+Top 500 Rank Mission 🚀
 </div>
 
 </div>
@@ -71,64 +295,50 @@ supabase
 }
 from '../js/config/supabase.js'
 
-async function signup() {
+async function signup(){
 
 const email =
-document.getElementById(
-'email'
-).value
+document.getElementById('email').value
 
 const password =
-document.getElementById(
-'password'
-).value
+document.getElementById('password').value
 
 const {
 error
-} = await supabase.auth.signUp({
-
+} =
+await supabase.auth.signUp({
 email,
 password
-
 })
 
 if(error){
 
 alert(error.message)
-
 return
 }
 
-alert(
-'Signup successful'
-)
+alert('Signup successful')
 }
 
-async function login() {
+async function login(){
 
 const email =
-document.getElementById(
-'email'
-).value
+document.getElementById('email').value
 
 const password =
-document.getElementById(
-'password'
-).value
+document.getElementById('password').value
 
 const {
 error
-} = await supabase.auth.signInWithPassword({
-
+} =
+await supabase.auth.signInWithPassword({
 email,
 password
-
 })
 
 if(error){
 
 alert(error.message)
-
 return
 }
 
@@ -136,24 +346,10 @@ window.location.href =
 './dashboard.html'
 }
 
-document
-.getElementById(
-'signupBtn'
-)
-
-.onclick =
-signup
-
-document
-.getElementById(
-'loginBtn'
-)
-
-.onclick =
-login
+window.login = login
+window.signup = signup
 
 </script>
 
 </body>
-
 </html>
