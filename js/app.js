@@ -44,6 +44,11 @@ import {
 }
 from './ui/leaderboard.js'
 
+import {
+    playAlarm
+}
+from './timer/timerAudio.js'
+
 const welcomeText =
 document.getElementById(
     'welcomeText'
@@ -346,7 +351,9 @@ startBtn.addEventListener(
 
                 alert(
                     'Session Completed'
-                )
+                )  
+                 
+                playAlarm()
 
                 stopPresence()
 

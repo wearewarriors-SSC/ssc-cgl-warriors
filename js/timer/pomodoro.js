@@ -1,11 +1,4 @@
-import {
-    TimerEngine
-}
-from './timerLogic.js'
-
-let timer = null
-
-let interval = null
+let worker = null
 
 export function startPomodoro(
     minutes,
@@ -13,33 +6,59 @@ export function startPomodoro(
     onComplete
 ) {
 
-    timer =
-    new TimerEngine(minutes)
+    if (worker) {
 
-    timer.start()
+        worker.terminate()
+    }
 
-    clearInterval(interval)
+    worker = new Worker(
+        './js/workers/timerWorker.js'
+    )
 
-    interval = setInterval(() => {
+    worker.postMessage({
 
-        const remaining =
-        timer.getRemaining()
+        action: 'start',
 
-        onTick(remaining)
+        duration:
+        minutes * 60 * 1000
+    })
+
+    worker.onmessage = (
+        event
+    ) => {
+
+        const data =
+        event.data
 
         if (
-            timer.isFinished()
+            data.remaining !==
+            undefined
         ) {
 
-            clearInterval(interval)
+            onTick(
+                data.remaining
+            )
+        }
+
+        if (
+            data.completed
+        ) {
 
             onComplete()
         }
-
-    }, 1000)
+    }
 }
 
 export function stopPomodoro() {
 
-    clearInterval(interval)
+    if (worker) {
+
+        worker.postMessage({
+            action: 'stop'
+        })
+
+        worker.terminate()
+
+        worker = null
+    }
 }
