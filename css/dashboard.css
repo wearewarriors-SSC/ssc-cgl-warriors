@@ -232,3 +232,21 @@ border-radius: 12px;
 
 cursor: pointer;
 }
+
+.presence-card {
+
+transition: 0.2s;
+}
+
+.presence-card:hover {
+
+transform:
+translateY(-2px);
+}
+
+.nav-grid {
+
+max-height: 70vh;
+
+overflow-y: auto;
+}
