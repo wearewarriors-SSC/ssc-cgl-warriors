@@ -1,38 +1,49 @@
-import { supabase }
+import {
+    supabase
+}
 from '../config/supabase.js'
 
 export async function getLeaderboard() {
 
     const {
-        data
+        data,
+        error
     } = await supabase
 
         .from('sessions')
 
-        .select('*')
+        .select(`
+            duration,
+            user_id
+        `)
+
+    if (error) {
+
+        console.error(error)
+
+        return []
+    }
 
     const totals = {}
 
-    ;(data || []).forEach(
-        session => {
+    data.forEach(session => {
 
-            if (
-                !totals[
-                    session.user_name
-                ]
-            ) {
-
-                totals[
-                    session.user_name
-                ] = 0
-            }
+        if (
+            !totals[
+                session.user_id
+            ]
+        ) {
 
             totals[
-                session.user_name
-            ] +=
-            session.duration || 0
+                session.user_id
+            ] = 0
         }
-    )
+
+        totals[
+            session.user_id
+        ] +=
+        session.duration || 0
+    })
 
     return Object.entries(
         totals
@@ -42,7 +53,6 @@ export async function getLeaderboard() {
         ([user, total]) => ({
 
             user,
-
             total
         })
     )
