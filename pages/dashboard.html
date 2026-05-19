@@ -21,6 +21,8 @@
         SSC Warriors Dashboard
     </h1>
 
+    <div id="userInfo"></div>
+
     <div id="stats"></div>
 
     <canvas
@@ -29,15 +31,13 @@
         height="200"
     ></canvas>
 
-    <canvas
-        id="radarChart"
-        width="400"
-        height="200"
-    ></canvas>
-
-    <div id="leaderboard"></div>
-
     <script type="module">
+
+        import {
+            requireAuth
+        }
+
+        from '../js/auth/session.js'
 
         import {
             getStudyStats
@@ -51,29 +51,36 @@
 
         from '../js/charts/performanceChart.js'
 
-        import {
-            buildRadarChart
-        }
+        const user =
+        await requireAuth()
 
-        from '../js/charts/radarChart.js'
+        document
+        .getElementById(
+            'userInfo'
+        )
 
-        import {
-            renderLeaderboard
-        }
+        .innerHTML = `
 
-        from '../js/ui/leaderboardTable.js'
+            <div class="presence-card">
 
-        import {
-            getLeaderboard
-        }
+                Logged in as:
 
-        from '../js/database/leaderboard.js'
+                <br><br>
+
+                <b>
+                    ${user.email}
+                </b>
+
+            </div>
+        `
 
         const stats =
         getStudyStats()
 
         document
-        .getElementById('stats')
+        .getElementById(
+            'stats'
+        )
 
         .innerHTML = `
 
@@ -82,7 +89,7 @@
                 Sessions:
                 ${stats.totalSessions}
 
-                <br>
+                <br><br>
 
                 Minutes:
                 ${stats.totalMinutes}
@@ -105,38 +112,12 @@
             ],
 
             [
-                55,
+                50,
                 60,
-                72,
-                80,
-                88
-            ]
-        )
-
-        buildRadarChart(
-
-            document.getElementById(
-                'radarChart'
-            ),
-
-            [
-                80,
-                75,
                 70,
-                65
+                80,
+                90
             ]
-        )
-
-        const leaderboard =
-        await getLeaderboard()
-
-        renderLeaderboard(
-
-            document.getElementById(
-                'leaderboard'
-            ),
-
-            leaderboard
         )
 
     </script>
