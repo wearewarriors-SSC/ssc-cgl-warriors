@@ -79,6 +79,14 @@ Analytics
 <div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
 <div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
 <div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
+<div class="tab" onclick="showTab('mockbattle',this)">Battle Arena</div>
+<div class="tab" onclick="showTab('gamification',this)">Gamification</div>
+<div class="tab" onclick="showTab('insights',this)">Insights</div>
+<div class="tab" onclick="showTab('heatmap',this)">Heatmap</div>
+<div class="tab" onclick="showTab('vault',this)">Vault</div>
+<div class="tab" onclick="showTab('testseries',this)">Test Series</div>
+<div class="tab" onclick="showTab('library',this)">Library</div>
+<div class="tab" onclick="showTab('community',this)">Community</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -111,6 +119,14 @@ Analytics
 <div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
 <div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
 <div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
+<div class="tab" onclick="showTab('mockbattle',this)">Battle Arena</div>
+<div class="tab" onclick="showTab('gamification',this)">Gamification</div>
+<div class="tab" onclick="showTab('insights',this)">Insights</div>
+<div class="tab" onclick="showTab('heatmap',this)">Heatmap</div>
+<div class="tab" onclick="showTab('vault',this)">Vault</div>
+<div class="tab" onclick="showTab('testseries',this)">Test Series</div>
+<div class="tab" onclick="showTab('library',this)">Library</div>
+<div class="tab" onclick="showTab('community',this)">Community</div>
 </div>
 
 <div class="tab"
@@ -158,6 +174,14 @@ Syllabus
 <div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
 <div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
 <div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
+<div class="tab" onclick="showTab('mockbattle',this)">Battle Arena</div>
+<div class="tab" onclick="showTab('gamification',this)">Gamification</div>
+<div class="tab" onclick="showTab('insights',this)">Insights</div>
+<div class="tab" onclick="showTab('heatmap',this)">Heatmap</div>
+<div class="tab" onclick="showTab('vault',this)">Vault</div>
+<div class="tab" onclick="showTab('testseries',this)">Test Series</div>
+<div class="tab" onclick="showTab('library',this)">Library</div>
+<div class="tab" onclick="showTab('community',this)">Community</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -190,6 +214,14 @@ Syllabus
 <div class="tab" onclick="showTab('examstrategy',this)">Strategy</div>
 <div class="tab" onclick="showTab('rankpredictor',this)">Rank Predictor</div>
 <div class="tab" onclick="showTab('focusstats',this)">Focus Stats</div>
+<div class="tab" onclick="showTab('mockbattle',this)">Battle Arena</div>
+<div class="tab" onclick="showTab('gamification',this)">Gamification</div>
+<div class="tab" onclick="showTab('insights',this)">Insights</div>
+<div class="tab" onclick="showTab('heatmap',this)">Heatmap</div>
+<div class="tab" onclick="showTab('vault',this)">Vault</div>
+<div class="tab" onclick="showTab('testseries',this)">Test Series</div>
+<div class="tab" onclick="showTab('library',this)">Library</div>
+<div class="tab" onclick="showTab('community',this)">Community</div>
 </div>
 
 </div>

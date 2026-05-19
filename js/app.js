@@ -67,6 +67,14 @@ import { weeklyreport } from './components/weeklyreport.js'
 import { examstrategy } from './components/examstrategy.js'
 import { rankpredictor } from './components/rankpredictor.js'
 import { focusstats } from './components/focusstats.js'
+import { mockbattle } from './components/mockbattle.js'
+import { gamification } from './components/gamification.js'
+import { insights } from './components/insights.js'
+import { heatmap } from './components/heatmap.js'
+import { vault } from './components/vault.js'
+import { testseries } from './components/testseries.js'
+import { library } from './components/library.js'
+import { community } from './components/community.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -99,6 +107,14 @@ import { weeklyreport } from './components/weeklyreport.js'
 import { examstrategy } from './components/examstrategy.js'
 import { rankpredictor } from './components/rankpredictor.js'
 import { focusstats } from './components/focusstats.js'
+import { mockbattle } from './components/mockbattle.js'
+import { gamification } from './components/gamification.js'
+import { insights } from './components/insights.js'
+import { heatmap } from './components/heatmap.js'
+import { vault } from './components/vault.js'
+import { testseries } from './components/testseries.js'
+import { library } from './components/library.js'
+import { community } from './components/community.js'
 
 const {
 data
@@ -165,6 +181,14 @@ analytics()
 + examstrategy()
 + rankpredictor()
 + focusstats()
++ mockbattle()
++ gamification()
++ insights()
++ heatmap()
++ vault()
++ testseries()
++ library()
++ community()
 + notifications()
 + friends()
 + achievements()
@@ -197,6 +221,14 @@ analytics()
 + examstrategy()
 + rankpredictor()
 + focusstats()
++ mockbattle()
++ gamification()
++ insights()
++ heatmap()
++ vault()
++ testseries()
++ library()
++ community()
 
 window.showTab =
 (id,el) => {
