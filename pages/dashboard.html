@@ -25,6 +25,10 @@
 
     <div id="stats"></div>
 
+    <button id="studyBtn">
+        Complete 25 Min Session
+    </button>
+
     <canvas
         id="performanceChart"
         width="400"
@@ -40,10 +44,11 @@
         from '../js/auth/session.js'
 
         import {
-            getStudyStats
+            saveSession,
+            getSessions
         }
 
-        from '../js/utils/stats.js'
+        from '../js/database/sessions.js'
 
         import {
             buildPerformanceChart
@@ -74,28 +79,75 @@
             </div>
         `
 
-        const stats =
-        getStudyStats()
+        async function loadStats() {
+
+            const sessions =
+            await getSessions(
+                user.id
+            )
+
+            const totalMinutes =
+            sessions.reduce(
+
+                (sum, item) =>
+
+                sum +
+                (
+                    item.duration || 0
+                ),
+
+                0
+            )
+
+            document
+            .getElementById(
+                'stats'
+            )
+
+            .innerHTML = `
+
+                <div class="presence-card">
+
+                    Sessions:
+                    ${sessions.length}
+
+                    <br><br>
+
+                    Minutes:
+                    ${totalMinutes}
+
+                </div>
+            `
+        }
 
         document
         .getElementById(
-            'stats'
+            'studyBtn'
         )
 
-        .innerHTML = `
+        .addEventListener(
 
-            <div class="presence-card">
+            'click',
 
-                Sessions:
-                ${stats.totalSessions}
+            async () => {
 
-                <br><br>
+                await saveSession({
 
-                Minutes:
-                ${stats.totalMinutes}
+                    user_id:
+                    user.id,
 
-            </div>
-        `
+                    duration:
+                    25,
+
+                    note:
+                    'Study Session'
+                })
+
+                loadStats()
+            }
+        )
+
+        await loadStats()
 
         buildPerformanceChart(
 
