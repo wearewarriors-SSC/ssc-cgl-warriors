@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Study Notes</title>
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<h1>Personal Study Notes</h1>
+
+<textarea
+id="noteInput"
+placeholder="Write note..."
+></textarea>
+
+<br><br>
+
+<button id="saveBtn">
+Save Note
+</button>
+
+<div id="notes"></div>
+
+<script type="module">
+
+import {
+requireAuth
+}
+from '../js/auth/session.js'
+
+import {
+saveNote,
+getNotes
+}
+from '../js/database/notes.js'
+
+const user =
+await requireAuth()
+
+async function loadNotes() {
+
+const notes =
+await getNotes(
+user.email
+)
+
+const container =
+document.getElementById(
+'notes'
+)
+
+container.innerHTML = ''
+
+notes.forEach(note => {
+
+const card =
+document.createElement('div')
+
+card.className =
+'presence-card'
+
+card.innerHTML =
+note.note
+
+container.appendChild(card)
+
+})
+}
+
+document
+.getElementById(
+'saveBtn'
+)
+
+.addEventListener(
+
+'click',
+
+async () => {
+
+await saveNote({
+
+user_email:
+user.email,
+
+note:
+document
+.getElementById(
+'noteInput'
+).value
+
+})
+
+document
+.getElementById(
+'noteInput'
+).value = ''
+
+loadNotes()
+
+}
+)
+
+loadNotes()
+
+</script>
+
+</body>
+</html>
