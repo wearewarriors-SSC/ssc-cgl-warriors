@@ -344,3 +344,37 @@ opacity:0.5;
 }
 
 }
+
+#loader{
+position:fixed;
+inset:0;
+background:#060816;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:0.5s;
+}
+
+.loader-box{
+text-align:center;
+}
+
+.spinner{
+width:90px;
+height:90px;
+border:6px solid rgba(255,255,255,0.08);
+border-top:6px solid #8f44ff;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin:auto;
+margin-bottom:24px;
+}
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}

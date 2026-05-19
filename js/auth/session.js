@@ -1,38 +1,35 @@
-import {
-    supabase
-}
-from '../config/supabase.js'
+import { supabase } from '../config/supabase.js'
 
-export async function getCurrentUser() {
+export async function checkAuth(){
 
-    const {
-        data,
-        error
-    } = await supabase.auth
-        .getUser()
+const {
+data:{session}
+} =
+await supabase.auth.getSession()
 
-    if (error) {
+return session
 
-        console.error(error)
-
-        return null
-    }
-
-    return data.user
 }
 
-export async function requireAuth() {
+export async function requireAuth(){
 
-    const user =
-    await getCurrentUser()
+const session =
+await checkAuth()
 
-    if (!user) {
+if(!session){
 
-        location.href =
-        './auth.html'
+window.location.href =
+'./pages/auth.html'
 
-        return null
-    }
+}
 
-    return user
+}
+
+export async function logout(){
+
+await supabase.auth.signOut()
+
+window.location.href =
+'./pages/auth.html'
+
 }
