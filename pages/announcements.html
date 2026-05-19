@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Announcements
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Community Announcements
+    </h1>
+
+    <input
+        id="announcementInput"
+        placeholder="Write update..."
+    >
+
+    <button id="postBtn">
+        Post
+    </button>
+
+    <div id="feed"></div>
+
+    <script type="module">
+
+        import {
+            requireAuth
+        }
+
+        from '../js/auth/session.js'
+
+        import {
+            createAnnouncement,
+            getAnnouncements
+        }
+
+        from '../js/database/announcements.js'
+
+        import {
+            supabase
+        }
+
+        from '../js/config/supabase.js'
+
+        const user =
+        await requireAuth()
+
+        async function loadFeed() {
+
+            const posts =
+            await getAnnouncements()
+
+            const container =
+            document.getElementById(
+                'feed'
+            )
+
+            container.innerHTML = ''
+
+            posts.forEach(post => {
+
+                const card =
+                document.createElement(
+                    'div'
+                )
+
+                card.className =
+                'presence-card'
+
+                card.innerHTML = `
+
+                    <b>
+                        ${post.user_email}
+                    </b>
+
+                    <br><br>
+
+                    ${post.message}
+                `
+
+                container.appendChild(
+                    card
+                )
+            })
+        }
+
+        document
+        .getElementById(
+            'postBtn'
+        )
+
+        .addEventListener(
+
+            'click',
+
+            async () => {
+
+                const message =
+                document
+                .getElementById(
+                    'announcementInput'
+                ).value
+
+                await createAnnouncement({
+
+                    user_email:
+                    user.email,
+
+                    message
+                })
+
+                document
+                .getElementById(
+                    'announcementInput'
+                ).value = ''
+
+                loadFeed()
+            }
+        )
+
+        await loadFeed()
+
+        supabase
+
+            .channel(
+                'announcements-live'
+            )
+
+            .on(
+
+                'postgres_changes',
+
+                {
+
+                    event: '*',
+
+                    schema: 'public',
+
+                    table:
+                    'announcements'
+                },
+
+                () => {
+
+                    loadFeed()
+                }
+            )
+
+            .subscribe()
+
+    </script>
+
+</body>
+
+</html>
