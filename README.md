@@ -1,33 +1,26 @@
-# SSC CGL Warriors
+# SSC Warriors
 
-Realtime collaborative SSC preparation platform.
+Realtime SSC CGL collaborative preparation platform.
 
 ## Features
 
-- Pomodoro study system
-- Live study arena
-- Analytics dashboard
-- Weak topic tracker
-- Revision planner
-- Mock test engine
-- AI insights
-- PWA support
-- Offline systems
-- Realtime sync
+- Authentication
+- Realtime chat
+- Leaderboards
+- Analytics
+- Study groups
+- Challenges
+- Notes
+- Streaks
+- Goals
+- Productivity tools
+- Supabase backend
+- Vercel deployment
 
-## Stack
+## Tech Stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+- HTML
+- CSS
+- JavaScript
 - Supabase
-- Chart.js
-- PWA
-
-## Deployment
-
-Hosted using Vercel.
-
-## Developer
-
-SSC Warriors Team
+- Vercel
