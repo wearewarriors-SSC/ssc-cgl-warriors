@@ -1,67 +1,683 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8"/>
 
 <meta
 name="viewport"
 content="width=device-width, initial-scale=1.0"
->
+/>
 
 <title>
 SSC Warriors
 </title>
 
 <link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
 rel="stylesheet"
-href="./css/dashboard.css"
->
+/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#020617,
+#0f172a
+);
+
+color:white;
+
+min-height:100vh;
+
+padding:20px;
+}
+
+.topbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:24px;
+}
+
+.logo{
+
+font-size:24px;
+font-weight:800;
+
+background:
+linear-gradient(
+135deg,
+#818cf8,
+#c084fc
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.user-box{
+
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+.logout{
+
+background:#ef4444;
+border:none;
+padding:10px 16px;
+border-radius:12px;
+color:white;
+cursor:pointer;
+}
+
+.tabs{
+
+display:flex;
+gap:12px;
+
+overflow-x:auto;
+
+padding-bottom:12px;
+
+margin-bottom:24px;
+}
+
+.tab{
+
+padding:14px 20px;
+
+border-radius:16px;
+
+background:
+rgba(255,255,255,0.06);
+
+backdrop-filter:blur(12px);
+
+cursor:pointer;
+
+white-space:nowrap;
+
+transition:0.2s;
+}
+
+.tab.active{
+
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#9333ea
+);
+}
+
+.section{
+
+display:none;
+}
+
+.section.active{
+
+display:block;
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:18px;
+}
+
+.card{
+
+background:
+rgba(255,255,255,0.06);
+
+backdrop-filter:blur(14px);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+padding:22px;
+
+border-radius:24px;
+
+box-shadow:
+0 8px 30px rgba(0,0,0,0.25);
+}
+
+.card h2{
+
+margin-bottom:14px;
+
+font-size:18px;
+}
+
+.metric{
+
+font-size:42px;
+font-weight:800;
+
+margin-top:14px;
+
+background:
+linear-gradient(
+135deg,
+#818cf8,
+#c084fc
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+button{
+
+padding:14px;
+
+border:none;
+
+border-radius:14px;
+
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#9333ea
+);
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+
+width:100%;
+}
+
+input,
+select{
+
+width:100%;
+
+padding:14px;
+
+margin-top:10px;
+
+border:none;
+
+border-radius:14px;
+
+background:
+rgba(255,255,255,0.08);
+
+color:white;
+}
+
+.progress{
+
+height:14px;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,0.08);
+
+margin-top:14px;
+
+overflow:hidden;
+}
+
+.progress-bar{
+
+height:100%;
+
+width:65%;
+
+background:
+linear-gradient(
+135deg,
+#4f46e5,
+#9333ea
+);
+}
+
+.subject{
+
+padding:14px;
+
+border-radius:14px;
+
+background:
+rgba(255,255,255,0.05);
+
+margin-top:12px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.subject button{
+
+width:auto;
+
+padding:8px 14px;
+
+font-size:12px;
+}
+
+@media(max-width:768px){
+
+.metric{
+
+font-size:34px;
+}
+
+.tabs{
+
+gap:10px;
+}
+}
+
+</style>
 
 </head>
 
 <body>
 
-<h1>
-SSC Warriors
-</h1>
+<div class="topbar">
 
-<div class="presence-card">
+<div class="logo">
+⚔️ SSC Warriors
+</div>
+
+<div class="user-box">
+
+<div id="userEmail"></div>
+
+<button
+class="logout"
+onclick="logout()"
+>
+Logout
+</button>
+
+</div>
+
+</div>
+
+<div class="tabs">
+
+<div class="tab active"
+onclick="showTab('dashboard',this)">
+Dashboard
+</div>
+
+<div class="tab"
+onclick="showTab('focus',this)">
+Focus Timer
+</div>
+
+<div class="tab"
+onclick="showTab('mocks',this)">
+Mock Logger
+</div>
+
+<div class="tab"
+onclick="showTab('syllabus',this)">
+Syllabus
+</div>
+
+<div class="tab"
+onclick="showTab('analytics',this)">
+Analytics
+</div>
+
+</div>
+
+<div
+id="dashboard"
+class="section active"
+>
+
+<div class="grid">
+
+<div class="card">
 
 <h2>
-Navigation
+Today's Study
 </h2>
 
-<div class="nav-grid">
+<div class="metric">
+0h 00m
+</div>
 
-<a href="./pages/dashboard.html">Dashboard</a>
+</div>
 
-<a href="./pages/analytics.html">Analytics</a>
+<div class="card">
 
-<a href="./pages/mock-tests.html">Mock Tests</a>
+<h2>
+Mock Tests
+</h2>
 
-<a href="./pages/weak-topics.html">Weak Topics</a>
+<div class="metric">
+0
+</div>
 
-<a href="./pages/chat.html">Chat</a>
+</div>
 
-<a href="./pages/groups.html">Groups</a>
+<div class="card">
 
-<a href="./pages/leaderboard.html">Leaderboard</a>
+<h2>
+Syllabus Progress
+</h2>
 
-<a href="./pages/notes.html">Notes</a>
+<div class="metric">
+65%
+</div>
 
-<a href="./pages/streaks.html">Streaks</a>
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
 
-<a href="./pages/goals.html">Goals</a>
-
-<a href="./pages/todos.html">Todos</a>
-
-<a href="./pages/profile.html">Profile</a>
+</div>
 
 </div>
 
 </div>
+
+<div
+id="focus"
+class="section"
+>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>
+Deep Focus Timer
+</h2>
+
+<select>
+
+<option>
+25 Minutes
+</option>
+
+<option>
+50 Minutes
+</option>
+
+<option>
+90 Minutes
+</option>
+
+</select>
+
+<button
+style="margin-top:18px"
+>
+Start Focus Session
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div
+id="mocks"
+class="section"
+>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>
+Submit Mock Score
+</h2>
+
+<input placeholder="Mock Name"/>
+
+<input placeholder="Quant"/>
+
+<input placeholder="Reasoning"/>
+
+<input placeholder="English"/>
+
+<input placeholder="GA"/>
+
+<button
+style="margin-top:18px"
+>
+Save Mock
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div
+id="syllabus"
+class="section"
+>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>
+Quantitative Aptitude
+</h2>
+
+<div class="subject">
+
+<span>
+Percentage & Profit Loss
+</span>
+
+<button>
+Done
+</button>
+
+</div>
+
+<div class="subject">
+
+<span>
+Ratio & Mixture
+</span>
+
+<button>
+Done
+</button>
+
+</div>
+
+<div class="subject">
+
+<span>
+Time & Distance
+</span>
+
+<button>
+Done
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>
+Reasoning
+</h2>
+
+<div class="subject">
+
+<span>
+Coding Decoding
+</span>
+
+<button>
+Done
+</button>
+
+</div>
+
+<div class="subject">
+
+<span>
+Blood Relations
+</span>
+
+<button>
+Done
+</button>
+
+</div>
+
+<div class="subject">
+
+<span>
+Series
+</span>
+
+<button>
+Done
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div
+id="analytics"
+class="section"
+>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>
+Performance Trend
+</h2>
+
+<div class="metric">
+78%
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>
+Current Rank Goal
+</h2>
+
+<div class="metric">
+Top 500
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module">
+
+import {
+supabase
+}
+from './js/config/supabase.js'
+
+const {
+data
+} =
+await supabase.auth.getUser()
+
+if(!data.user){
+
+window.location.href =
+'./pages/auth.html'
+}
+
+document
+.getElementById(
+'userEmail'
+)
+
+.innerText =
+data.user.email
+
+window.showTab =
+(id,el) => {
+
+document
+.querySelectorAll('.section')
+.forEach(sec => {
+
+sec.classList.remove('active')
+
+})
+
+document
+.querySelectorAll('.tab')
+.forEach(tab => {
+
+tab.classList.remove('active')
+
+})
+
+document
+.getElementById(id)
+.classList.add('active')
+
+el.classList.add('active')
+}
+
+window.logout =
+async () => {
+
+await supabase.auth.signOut()
+
+window.location.href =
+'./pages/auth.html'
+}
+
+</script>
 
 </body>
-
 </html>
