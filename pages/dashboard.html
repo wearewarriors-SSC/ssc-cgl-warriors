@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        SSC Warriors Dashboard
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        SSC Warriors Dashboard
+    </h1>
+
+    <div id="stats"></div>
+
+    <canvas
+        id="performanceChart"
+        width="400"
+        height="200"
+    ></canvas>
+
+    <canvas
+        id="radarChart"
+        width="400"
+        height="200"
+    ></canvas>
+
+    <div id="leaderboard"></div>
+
+    <script type="module">
+
+        import {
+            getStudyStats
+        }
+
+        from '../js/utils/stats.js'
+
+        import {
+            buildPerformanceChart
+        }
+
+        from '../js/charts/performanceChart.js'
+
+        import {
+            buildRadarChart
+        }
+
+        from '../js/charts/radarChart.js'
+
+        import {
+            renderLeaderboard
+        }
+
+        from '../js/ui/leaderboardTable.js'
+
+        import {
+            getLeaderboard
+        }
+
+        from '../js/database/leaderboard.js'
+
+        const stats =
+        getStudyStats()
+
+        document
+        .getElementById('stats')
+
+        .innerHTML = `
+
+            <div class="presence-card">
+
+                Sessions:
+                ${stats.totalSessions}
+
+                <br>
+
+                Minutes:
+                ${stats.totalMinutes}
+
+            </div>
+        `
+
+        buildPerformanceChart(
+
+            document.getElementById(
+                'performanceChart'
+            ),
+
+            [
+                'Mon',
+                'Tue',
+                'Wed',
+                'Thu',
+                'Fri'
+            ],
+
+            [
+                55,
+                60,
+                72,
+                80,
+                88
+            ]
+        )
+
+        buildRadarChart(
+
+            document.getElementById(
+                'radarChart'
+            ),
+
+            [
+                80,
+                75,
+                70,
+                65
+            ]
+        )
+
+        const leaderboard =
+        await getLeaderboard()
+
+        renderLeaderboard(
+
+            document.getElementById(
+                'leaderboard'
+            ),
+
+            leaderboard
+        )
+
+    </script>
+
+</body>
+
+</html>
