@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Top Users</title>
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<h1>Top Performers</h1>
+
+<div id="leaders"></div>
+
+<script type="module">
+
+import {
+requireAuth
+}
+from '../js/auth/session.js'
+
+import {
+getLeaderboard
+}
+from '../js/database/leaderboard.js'
+
+await requireAuth()
+
+const leaders =
+await getLeaderboard()
+
+const container =
+document.getElementById(
+'leaders'
+)
+
+leaders.slice(0,10)
+.forEach((user,index) => {
+
+const card =
+document.createElement('div')
+
+card.className =
+'presence-card'
+
+card.innerHTML = `
+
+🏆 Rank #${index+1}
+
+<br><br>
+
+${user.user}
+
+<br><br>
+
+${user.total} mins
+
+`
+
+container.appendChild(card)
+
+})
+
+</script>
+
+</body>
+</html>

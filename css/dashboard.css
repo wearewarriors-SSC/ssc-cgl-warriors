@@ -166,3 +166,50 @@ button {
         padding: 12px;
     }
 }
+
+body {
+
+background:
+#0f172a;
+
+color: white;
+
+font-family: Arial;
+
+padding: 20px;
+}
+
+textarea,
+input,
+button {
+
+padding: 12px;
+
+border-radius: 10px;
+
+border: none;
+
+margin: 4px;
+}
+
+button {
+
+cursor: pointer;
+
+background:
+#4f46e5;
+
+color: white;
+}
+
+.presence-card {
+
+background:
+#1e293b;
+
+padding: 18px;
+
+border-radius: 16px;
+
+margin-top: 12px;
+}

@@ -336,3 +336,36 @@ document
 .appendChild(roomsLink)
 
 </script>
+
+<script>
+
+const extraPages = [
+
+['History','./pages/history.html'],
+
+['Top Users','./pages/top-users.html'],
+
+['Focus Zone','./pages/focus.html'],
+
+['AI Recommendations','./pages/recommendations.html']
+
+]
+
+extraPages.forEach(item => {
+
+const link =
+document.createElement('a')
+
+link.href =
+item[1]
+
+link.innerText =
+item[0]
+
+document
+.querySelector('.nav-grid')
+.appendChild(link)
+
+})
+
+</script>
