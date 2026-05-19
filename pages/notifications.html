@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Notifications
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Notifications
+    </h1>
+
+    <div id="notifications"></div>
+
+    <script type="module">
+
+        import {
+            requireAuth
+        }
+
+        from '../js/auth/session.js'
+
+        import {
+            getNotifications
+        }
+
+        from '../js/database/notifications.js'
+
+        import {
+            supabase
+        }
+
+        from '../js/config/supabase.js'
+
+        const user =
+        await requireAuth()
+
+        async function loadNotifications() {
+
+            const rows =
+            await getNotifications(
+                user.email
+            )
+
+            const container =
+            document.getElementById(
+                'notifications'
+            )
+
+            container.innerHTML = ''
+
+            rows.forEach(row => {
+
+                const card =
+                document.createElement(
+                    'div'
+                )
+
+                card.className =
+                'presence-card'
+
+                card.innerHTML = `
+
+                    🔔
+
+                    <br><br>
+
+                    ${row.message}
+                `
+
+                container.appendChild(
+                    card
+                )
+            })
+        }
+
+        await loadNotifications()
+
+        supabase
+
+            .channel(
+                'notifications-live'
+            )
+
+            .on(
+
+                'postgres_changes',
+
+                {
+
+                    event: '*',
+
+                    schema: 'public',
+
+                    table:
+                    'notifications'
+                },
+
+                () => {
+
+                    loadNotifications()
+                }
+            )
+
+            .subscribe()
+
+    </script>
+
+</body>
+
+</html>
