@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        SSC Warriors Auth
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Login / Signup
+    </h1>
+
+    <div class="presence-card">
+
+        <input
+            id="email"
+            type="email"
+            placeholder="Email"
+        >
+
+        <br><br>
+
+        <input
+            id="password"
+            type="password"
+            placeholder="Password"
+        >
+
+        <br><br>
+
+        <button id="signupBtn">
+            Sign Up
+        </button>
+
+        <button id="loginBtn">
+            Login
+        </button>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+
+    <div id="status"></div>
+
+    <script type="module">
+
+        import {
+            supabase
+        }
+
+        from '../js/config/supabase.js'
+
+        const status =
+        document.getElementById(
+            'status'
+        )
+
+        async function signUp() {
+
+            const email =
+            document
+            .getElementById(
+                'email'
+            ).value
+
+            const password =
+            document
+            .getElementById(
+                'password'
+            ).value
+
+            const {
+                error
+            } = await supabase.auth
+                .signUp({
+
+                    email,
+                    password
+                })
+
+            if (error) {
+
+                status.innerHTML =
+                error.message
+
+                return
+            }
+
+            status.innerHTML =
+            'Signup successful'
+        }
+
+        async function login() {
+
+            const email =
+            document
+            .getElementById(
+                'email'
+            ).value
+
+            const password =
+            document
+            .getElementById(
+                'password'
+            ).value
+
+            const {
+                error
+            } = await supabase.auth
+                .signInWithPassword({
+
+                    email,
+                    password
+                })
+
+            if (error) {
+
+                status.innerHTML =
+                error.message
+
+                return
+            }
+
+            location.href =
+            './dashboard.html'
+        }
+
+        async function logout() {
+
+            await supabase.auth
+                .signOut()
+
+            status.innerHTML =
+            'Logged out'
+        }
+
+        document
+        .getElementById(
+            'signupBtn'
+        )
+
+        .addEventListener(
+            'click',
+            signUp
+        )
+
+        document
+        .getElementById(
+            'loginBtn'
+        )
+
+        .addEventListener(
+            'click',
+            login
+        )
+
+        document
+        .getElementById(
+            'logoutBtn'
+        )
+
+        .addEventListener(
+            'click',
+            logout
+        )
+
+    </script>
+
+</body>
+
+</html>
