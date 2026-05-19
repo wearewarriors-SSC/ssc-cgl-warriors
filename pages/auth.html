@@ -19,8 +19,6 @@ href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&di
 rel="stylesheet"
 />
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <style>
 
 *{
@@ -142,16 +140,6 @@ color:white;
 font-size:15px;
 
 outline:none;
-
-transition:0.2s;
-}
-
-input:focus{
-
-border-color:#8b5cf6;
-
-box-shadow:
-0 0 0 4px rgba(139,92,246,0.15);
 }
 
 button{
@@ -169,9 +157,7 @@ font-weight:700;
 
 cursor:pointer;
 
-transition:0.2s;
-
-margin-top:8px;
+margin-top:12px;
 }
 
 .login-btn{
@@ -186,27 +172,12 @@ linear-gradient(
 color:white;
 }
 
-.login-btn:hover{
-
-transform:translateY(-2px);
-
-opacity:0.92;
-}
-
 .signup-btn{
 
 background:
 rgba(255,255,255,0.08);
 
 color:white;
-
-margin-top:14px;
-}
-
-.signup-btn:hover{
-
-background:
-rgba(255,255,255,0.14);
 }
 
 .footer{
@@ -242,9 +213,7 @@ SSC CGL Warriors Arena
 
 <div class="input-group">
 
-<label>
-Email Address
-</label>
+<label>Email Address</label>
 
 <input
 type="email"
@@ -256,9 +225,7 @@ placeholder="Enter your email"
 
 <div class="input-group">
 
-<label>
-Password
-</label>
+<label>Password</label>
 
 <input
 type="password"
@@ -270,14 +237,14 @@ placeholder="Enter your password"
 
 <button
 class="login-btn"
-onclick="login()"
+id="loginBtn"
 >
 Sign In
 </button>
 
 <button
 class="signup-btn"
-onclick="signup()"
+id="signupBtn"
 >
 Create Account
 </button>
@@ -317,7 +284,9 @@ alert(error.message)
 return
 }
 
-alert('Signup successful')
+alert(
+'Account created successfully'
+)
 }
 
 async function login(){
@@ -343,11 +312,16 @@ return
 }
 
 window.location.href =
-'./dashboard.html'
+'../index.html'
 }
 
-window.login = login
-window.signup = signup
+document
+.getElementById('signupBtn')
+.addEventListener('click',signup)
+
+document
+.getElementById('loginBtn')
+.addEventListener('click',login)
 
 </script>
 
