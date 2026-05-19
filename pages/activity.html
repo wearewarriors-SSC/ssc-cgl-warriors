@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Activity Feed
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Community Activity Feed
+    </h1>
+
+    <div id="feed"></div>
+
+    <script type="module">
+
+        import {
+            requireAuth
+        }
+
+        from '../js/auth/session.js'
+
+        import {
+            getActivities
+        }
+
+        from '../js/database/activity.js'
+
+        import {
+            supabase
+        }
+
+        from '../js/config/supabase.js'
+
+        await requireAuth()
+
+        async function loadFeed() {
+
+            const activities =
+            await getActivities()
+
+            const container =
+            document.getElementById(
+                'feed'
+            )
+
+            container.innerHTML = ''
+
+            activities.forEach(activity => {
+
+                const card =
+                document.createElement(
+                    'div'
+                )
+
+                card.className =
+                'presence-card'
+
+                card.innerHTML = `
+
+                    <b>
+                        ${activity.user_email}
+                    </b>
+
+                    <br><br>
+
+                    ${activity.activity}
+                `
+
+                container.appendChild(
+                    card
+                )
+            })
+        }
+
+        await loadFeed()
+
+        supabase
+
+            .channel(
+                'activity-live'
+            )
+
+            .on(
+
+                'postgres_changes',
+
+                {
+
+                    event: '*',
+
+                    schema: 'public',
+
+                    table:
+                    'activity_feed'
+                },
+
+                () => {
+
+                    loadFeed()
+                }
+            )
+
+            .subscribe()
+
+    </script>
+
+</body>
+
+</html>
