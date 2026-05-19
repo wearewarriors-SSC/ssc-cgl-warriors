@@ -109,6 +109,13 @@ Analytics
 <div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
 <div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
 <div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
+<div class="tab" onclick="showTab('cloudsync',this)">Cloud Sync</div>
+<div class="tab" onclick="showTab('teamrooms',this)">Team Rooms</div>
+<div class="tab" onclick="showTab('advancedleaderboard',this)">Advanced Leaderboard</div>
+<div class="tab" onclick="showTab('smartgoals',this)">Smart Goals</div>
+<div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
+<div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
+<div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -171,6 +178,13 @@ Analytics
 <div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
 <div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
 <div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
+<div class="tab" onclick="showTab('cloudsync',this)">Cloud Sync</div>
+<div class="tab" onclick="showTab('teamrooms',this)">Team Rooms</div>
+<div class="tab" onclick="showTab('advancedleaderboard',this)">Advanced Leaderboard</div>
+<div class="tab" onclick="showTab('smartgoals',this)">Smart Goals</div>
+<div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
+<div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
+<div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
 </div>
 
 <div class="tab"
@@ -248,6 +262,13 @@ Syllabus
 <div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
 <div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
 <div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
+<div class="tab" onclick="showTab('cloudsync',this)">Cloud Sync</div>
+<div class="tab" onclick="showTab('teamrooms',this)">Team Rooms</div>
+<div class="tab" onclick="showTab('advancedleaderboard',this)">Advanced Leaderboard</div>
+<div class="tab" onclick="showTab('smartgoals',this)">Smart Goals</div>
+<div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
+<div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
+<div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -310,6 +331,13 @@ Syllabus
 <div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
 <div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
 <div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
+<div class="tab" onclick="showTab('cloudsync',this)">Cloud Sync</div>
+<div class="tab" onclick="showTab('teamrooms',this)">Team Rooms</div>
+<div class="tab" onclick="showTab('advancedleaderboard',this)">Advanced Leaderboard</div>
+<div class="tab" onclick="showTab('smartgoals',this)">Smart Goals</div>
+<div class="tab" onclick="showTab('elitezone',this)">Elite Zone</div>
+<div class="tab" onclick="showTab('poweranalytics',this)">Power Analytics</div>
+<div class="tab" onclick="showTab('ultimatehub',this)">Ultimate Hub</div>
 </div>
 
 </div>

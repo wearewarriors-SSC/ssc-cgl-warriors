@@ -100,6 +100,13 @@ import { focusanalyticspro } from './components/focusanalyticspro.js'
 import { warriorstatus } from './components/warriorstatus.js'
 import { smartrevision } from './components/smartrevision.js'
 import { masterdashboard } from './components/masterdashboard.js'
+import { cloudsync } from './components/cloudsync.js'
+import { teamrooms } from './components/teamrooms.js'
+import { advancedleaderboard } from './components/advancedleaderboard.js'
+import { smartgoals } from './components/smartgoals.js'
+import { elitezone } from './components/elitezone.js'
+import { poweranalytics } from './components/poweranalytics.js'
+import { ultimatehub } from './components/ultimatehub.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -162,6 +169,13 @@ import { focusanalyticspro } from './components/focusanalyticspro.js'
 import { warriorstatus } from './components/warriorstatus.js'
 import { smartrevision } from './components/smartrevision.js'
 import { masterdashboard } from './components/masterdashboard.js'
+import { cloudsync } from './components/cloudsync.js'
+import { teamrooms } from './components/teamrooms.js'
+import { advancedleaderboard } from './components/advancedleaderboard.js'
+import { smartgoals } from './components/smartgoals.js'
+import { elitezone } from './components/elitezone.js'
+import { poweranalytics } from './components/poweranalytics.js'
+import { ultimatehub } from './components/ultimatehub.js'
 
 const {
 data
@@ -258,6 +272,13 @@ analytics()
 + warriorstatus()
 + smartrevision()
 + masterdashboard()
++ cloudsync()
++ teamrooms()
++ advancedleaderboard()
++ smartgoals()
++ elitezone()
++ poweranalytics()
++ ultimatehub()
 + notifications()
 + friends()
 + achievements()
@@ -320,6 +341,13 @@ analytics()
 + warriorstatus()
 + smartrevision()
 + masterdashboard()
++ cloudsync()
++ teamrooms()
++ advancedleaderboard()
++ smartgoals()
++ elitezone()
++ poweranalytics()
++ ultimatehub()
 
 window.showTab =
 (id,el) => {
