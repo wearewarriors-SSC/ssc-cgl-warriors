@@ -102,6 +102,13 @@ Analytics
 <div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
 <div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
 <div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
+<div class="tab" onclick="showTab('aiinsightspro',this)">AI Insights Pro</div>
+<div class="tab" onclick="showTab('personalizedplan',this)">Personalized Plan</div>
+<div class="tab" onclick="showTab('competitiveanalysis',this)">Competitive Analysis</div>
+<div class="tab" onclick="showTab('focusanalyticspro',this)">Focus Analytics Pro</div>
+<div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
+<div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
+<div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -157,6 +164,13 @@ Analytics
 <div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
 <div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
 <div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
+<div class="tab" onclick="showTab('aiinsightspro',this)">AI Insights Pro</div>
+<div class="tab" onclick="showTab('personalizedplan',this)">Personalized Plan</div>
+<div class="tab" onclick="showTab('competitiveanalysis',this)">Competitive Analysis</div>
+<div class="tab" onclick="showTab('focusanalyticspro',this)">Focus Analytics Pro</div>
+<div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
+<div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
+<div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
 </div>
 
 <div class="tab"
@@ -227,6 +241,13 @@ Syllabus
 <div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
 <div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
 <div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
+<div class="tab" onclick="showTab('aiinsightspro',this)">AI Insights Pro</div>
+<div class="tab" onclick="showTab('personalizedplan',this)">Personalized Plan</div>
+<div class="tab" onclick="showTab('competitiveanalysis',this)">Competitive Analysis</div>
+<div class="tab" onclick="showTab('focusanalyticspro',this)">Focus Analytics Pro</div>
+<div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
+<div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
+<div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -282,6 +303,13 @@ Syllabus
 <div class="tab" onclick="showTab('activityfeed',this)">Activity Feed</div>
 <div class="tab" onclick="showTab('xpsystem',this)">XP System</div>
 <div class="tab" onclick="showTab('studygraph',this)">Study Graph</div>
+<div class="tab" onclick="showTab('aiinsightspro',this)">AI Insights Pro</div>
+<div class="tab" onclick="showTab('personalizedplan',this)">Personalized Plan</div>
+<div class="tab" onclick="showTab('competitiveanalysis',this)">Competitive Analysis</div>
+<div class="tab" onclick="showTab('focusanalyticspro',this)">Focus Analytics Pro</div>
+<div class="tab" onclick="showTab('warriorstatus',this)">Warrior Status</div>
+<div class="tab" onclick="showTab('smartrevision',this)">Smart Revision</div>
+<div class="tab" onclick="showTab('masterdashboard',this)">Master Dashboard</div>
 </div>
 
 </div>

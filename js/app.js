@@ -93,6 +93,13 @@ import { realtimedashboard } from './components/realtimedashboard.js'
 import { activityfeed } from './components/activityfeed.js'
 import { xpsystem } from './components/xpsystem.js'
 import { studygraph } from './components/studygraph.js'
+import { aiinsightspro } from './components/aiinsightspro.js'
+import { personalizedplan } from './components/personalizedplan.js'
+import { competitiveanalysis } from './components/competitiveanalysis.js'
+import { focusanalyticspro } from './components/focusanalyticspro.js'
+import { warriorstatus } from './components/warriorstatus.js'
+import { smartrevision } from './components/smartrevision.js'
+import { masterdashboard } from './components/masterdashboard.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -148,6 +155,13 @@ import { realtimedashboard } from './components/realtimedashboard.js'
 import { activityfeed } from './components/activityfeed.js'
 import { xpsystem } from './components/xpsystem.js'
 import { studygraph } from './components/studygraph.js'
+import { aiinsightspro } from './components/aiinsightspro.js'
+import { personalizedplan } from './components/personalizedplan.js'
+import { competitiveanalysis } from './components/competitiveanalysis.js'
+import { focusanalyticspro } from './components/focusanalyticspro.js'
+import { warriorstatus } from './components/warriorstatus.js'
+import { smartrevision } from './components/smartrevision.js'
+import { masterdashboard } from './components/masterdashboard.js'
 
 const {
 data
@@ -237,6 +251,13 @@ analytics()
 + activityfeed()
 + xpsystem()
 + studygraph()
++ aiinsightspro()
++ personalizedplan()
++ competitiveanalysis()
++ focusanalyticspro()
++ warriorstatus()
++ smartrevision()
++ masterdashboard()
 + notifications()
 + friends()
 + achievements()
@@ -292,6 +313,13 @@ analytics()
 + activityfeed()
 + xpsystem()
 + studygraph()
++ aiinsightspro()
++ personalizedplan()
++ competitiveanalysis()
++ focusanalyticspro()
++ warriorstatus()
++ smartrevision()
++ masterdashboard()
 
 window.showTab =
 (id,el) => {
