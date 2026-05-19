@@ -43,6 +43,12 @@ import { pyq } from './components/pyq.js'
 import { weaktopics } from './components/weaktopics.js'
 import { history } from './components/history.js'
 import { rankings } from './components/rankings.js'
+import { rooms } from './components/rooms.js'
+import { activity } from './components/activity.js'
+import { quotes } from './components/quotes.js'
+import { calendar } from './components/calendar.js'
+import { resources } from './components/resources.js'
+import { examtracker } from './components/examtracker.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -51,6 +57,12 @@ import { pyq } from './components/pyq.js'
 import { weaktopics } from './components/weaktopics.js'
 import { history } from './components/history.js'
 import { rankings } from './components/rankings.js'
+import { rooms } from './components/rooms.js'
+import { activity } from './components/activity.js'
+import { quotes } from './components/quotes.js'
+import { calendar } from './components/calendar.js'
+import { resources } from './components/resources.js'
+import { examtracker } from './components/examtracker.js'
 
 const {
 data
@@ -93,6 +105,12 @@ analytics()
 + weaktopics()
 + history()
 + rankings()
++ rooms()
++ activity()
++ quotes()
++ calendar()
++ resources()
++ examtracker()
 + notifications()
 + friends()
 + achievements()
@@ -101,6 +119,12 @@ analytics()
 + weaktopics()
 + history()
 + rankings()
++ rooms()
++ activity()
++ quotes()
++ calendar()
++ resources()
++ examtracker()
 
 window.showTab =
 (id,el) => {

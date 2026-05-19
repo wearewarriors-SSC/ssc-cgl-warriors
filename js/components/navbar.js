@@ -55,6 +55,12 @@ Analytics
 <div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
 <div class="tab" onclick="showTab('history',this)">History</div>
 <div class="tab" onclick="showTab('rankings',this)">Rankings</div>
+<div class="tab" onclick="showTab('rooms',this)">Rooms</div>
+<div class="tab" onclick="showTab('activity',this)">Activity</div>
+<div class="tab" onclick="showTab('quotes',this)">Quotes</div>
+<div class="tab" onclick="showTab('calendar',this)">Calendar</div>
+<div class="tab" onclick="showTab('resources',this)">Resources</div>
+<div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -63,6 +69,12 @@ Analytics
 <div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
 <div class="tab" onclick="showTab('history',this)">History</div>
 <div class="tab" onclick="showTab('rankings',this)">Rankings</div>
+<div class="tab" onclick="showTab('rooms',this)">Rooms</div>
+<div class="tab" onclick="showTab('activity',this)">Activity</div>
+<div class="tab" onclick="showTab('quotes',this)">Quotes</div>
+<div class="tab" onclick="showTab('calendar',this)">Calendar</div>
+<div class="tab" onclick="showTab('resources',this)">Resources</div>
+<div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
 </div>
 
 <div class="tab"
@@ -86,6 +98,12 @@ Syllabus
 <div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
 <div class="tab" onclick="showTab('history',this)">History</div>
 <div class="tab" onclick="showTab('rankings',this)">Rankings</div>
+<div class="tab" onclick="showTab('rooms',this)">Rooms</div>
+<div class="tab" onclick="showTab('activity',this)">Activity</div>
+<div class="tab" onclick="showTab('quotes',this)">Quotes</div>
+<div class="tab" onclick="showTab('calendar',this)">Calendar</div>
+<div class="tab" onclick="showTab('resources',this)">Resources</div>
+<div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -94,6 +112,12 @@ Syllabus
 <div class="tab" onclick="showTab('weaktopics',this)">Weak Topics</div>
 <div class="tab" onclick="showTab('history',this)">History</div>
 <div class="tab" onclick="showTab('rankings',this)">Rankings</div>
+<div class="tab" onclick="showTab('rooms',this)">Rooms</div>
+<div class="tab" onclick="showTab('activity',this)">Activity</div>
+<div class="tab" onclick="showTab('quotes',this)">Quotes</div>
+<div class="tab" onclick="showTab('calendar',this)">Calendar</div>
+<div class="tab" onclick="showTab('resources',this)">Resources</div>
+<div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
 </div>
 
 </div>
