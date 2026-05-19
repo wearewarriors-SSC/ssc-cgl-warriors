@@ -34,6 +34,9 @@ Mocks
 <div class="tab"
 onclick="showTab('analytics',this)">
 Analytics
+<div class="tab" onclick="showTab('leaderboard',this)">Leaderboard</div>
+<div class="tab" onclick="showTab('mocks',this)">Mocks</div>
+<div class="tab" onclick="showTab('syllabus',this)">Syllabus</div>
 </div>
 
 <div class="tab"

@@ -22,6 +22,9 @@ import {
 analytics
 }
 from './components/analytics.js'
+import { mocks } from './components/mocks.js'
+import { syllabus } from './components/syllabus.js'
+import { leaderboard } from './components/leaderboard.js'
 
 const {
 data
@@ -43,6 +46,9 @@ dashboard()
 focus()
 +
 analytics()
++ mocks()
++ syllabus()
++ leaderboard()
 
 window.showTab =
 (id,el) => {
