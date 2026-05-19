@@ -2,34 +2,41 @@ export function productivity(){
 
 return `
 
-<div
-id="productivity"
-class="section"
->
+<div id="productivity" class="section">
 
 <div class="grid">
 
 <div class="card">
 
-<h2>
-Productivity Score
-</h2>
+<h2>Daily Goals</h2>
 
-<div class="metric">
-88%
-</div>
+<p style="margin-top:18px">✅ 2 Mock Tests</p>
+<p>✅ 6h Study</p>
+<p>⬜ Revise Algebra</p>
 
 </div>
 
 <div class="card">
 
-<h2>
-Focus Sessions
-</h2>
+<h2>Task Manager</h2>
+
+<input placeholder="Add task"/>
+
+<button style="margin-top:18px">
+Add Task
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Consistency</h2>
 
 <div class="metric">
-6
+91%
 </div>
+
+<p>Discipline Score</p>
 
 </div>
 
