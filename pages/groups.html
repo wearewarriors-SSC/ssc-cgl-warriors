@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        SSC Study Groups
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Study Groups
+    </h1>
+
+    <input
+        id="groupName"
+        placeholder="Group Name"
+    >
+
+    <button id="createBtn">
+        Create Group
+    </button>
+
+    <div id="groups"></div>
+
+    <script type="module">
+
+        import {
+            requireAuth
+        }
+
+        from '../js/auth/session.js'
+
+        import {
+            createGroup,
+            getGroups
+        }
+
+        from '../js/database/groups.js'
+
+        const user =
+        await requireAuth()
+
+        async function loadGroups() {
+
+            const groups =
+            await getGroups()
+
+            const container =
+            document.getElementById(
+                'groups'
+            )
+
+            container.innerHTML = ''
+
+            groups.forEach(group => {
+
+                const card =
+                document.createElement(
+                    'div'
+                )
+
+                card.className =
+                'presence-card'
+
+                card.innerHTML = `
+
+                    <h3>
+                        ${group.name}
+                    </h3>
+
+                    Created by:
+
+                    <br><br>
+
+                    ${group.owner_email}
+                `
+
+                container.appendChild(
+                    card
+                )
+            })
+        }
+
+        document
+        .getElementById(
+            'createBtn'
+        )
+
+        .addEventListener(
+
+            'click',
+
+            async () => {
+
+                const name =
+                document
+                .getElementById(
+                    'groupName'
+                ).value
+
+                await createGroup({
+
+                    name,
+
+                    owner_email:
+                    user.email
+                })
+
+                loadGroups()
+            }
+        )
+
+        loadGroups()
+
+    </script>
+
+</body>
+
+</html>
