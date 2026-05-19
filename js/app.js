@@ -1,406 +1,80 @@
-import { supabase }
+import {
+supabase
+}
 from './config/supabase.js'
 
 import {
-    getUsername,
-    getDeviceId
+navbar
 }
-from './auth/identity.js'
+from './components/navbar.js'
 
 import {
-    showLoginModal
+dashboard
 }
-from './auth/loginModal.js'
+from './components/dashboard.js'
 
 import {
-    startPomodoro,
-    stopPomodoro
+focus
 }
-from './timer/pomodoro.js'
+from './components/focus.js'
 
 import {
-    saveSession
+analytics
 }
-from './database/sessions.js'
+from './components/analytics.js'
 
-import {
-    getSubjects
-}
-from './database/subjects.js'
+const {
+data
+} =
+await supabase.auth.getUser()
 
-import {
-    startPresence,
-    stopPresence
-}
-from './realtime/presence.js'
+if(!data.user){
 
-import {
-    subscribePresence
-}
-from './realtime/subscriptions.js'
-
-import {
-    renderPresence
-}
-from './ui/leaderboard.js'
-
-import {
-    requestNotificationPermission,
-    showNotification
-}
-from './ui/notifications.js'
-
-import {
-    playAlarm
-}
-from './timer/timerAudio.js'
-
-const welcomeText =
-document.getElementById(
-    'welcomeText'
-)
-
-const timerDisplay =
-document.getElementById(
-    'timerDisplay'
-)
-
-const subjectSelect =
-document.getElementById(
-    'subjectSelect'
-)
-
-const startBtn =
-document.getElementById(
-    'startBtn'
-)
-
-const stopBtn =
-document.getElementById(
-    'stopBtn'
-)
-
-const presenceContainer =
-document.getElementById(
-    'presenceContainer'
-)
-
-let currentProfile = null
-
-function format(ms) {
-
-    const totalSeconds =
-    Math.floor(ms / 1000)
-
-    const minutes =
-    Math.floor(totalSeconds / 60)
-
-    const seconds =
-    totalSeconds % 60
-
-    return `${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`
+window.location.href =
+'./pages/auth.html'
 }
 
-async function loadProfile(username) {
+document.body.innerHTML =
 
-    try {
+navbar()
++
+dashboard()
++
+focus()
++
+analytics()
 
-        const deviceId =
-        getDeviceId()
+window.showTab =
+(id,el) => {
 
-        const {
-            data: existing
-        } = await supabase
+document
+.querySelectorAll('.section')
+.forEach(sec => {
 
-            .from('profiles')
+sec.classList.remove('active')
 
-            .select('*')
+})
 
-            .eq(
-                'device_id',
-                deviceId
-            )
+document
+.querySelectorAll('.tab')
+.forEach(tab => {
 
-            .maybeSingle()
+tab.classList.remove('active')
 
-        if (existing) {
+})
 
-            currentProfile =
-            existing
+document
+.getElementById(id)
+.classList.add('active')
 
-            return
-        }
-
-        const {
-            data,
-            error
-        } = await supabase
-
-            .from('profiles')
-
-            .insert([
-                {
-                    username,
-                    device_id:
-                    deviceId
-                }
-            ])
-
-            .select()
-
-            .single()
-
-        if (error) {
-
-            console.error(error)
-
-            welcomeText.innerText =
-            'Profile Creation Failed'
-
-            return
-        }
-
-        currentProfile = data
-
-    } catch(err) {
-
-        console.error(err)
-
-        welcomeText.innerText =
-        'Profile Error'
-    }
+el.classList.add('active')
 }
 
-async function initializeSubjects() {
+window.logout =
+async () => {
 
-    const subjects =
-    await getSubjects()
+await supabase.auth.signOut()
 
-    subjectSelect.innerHTML = ''
-
-    subjects.forEach(subject => {
-
-        const option =
-        document.createElement(
-            'option'
-        )
-
-        option.value =
-        subject.name
-
-        option.innerText =
-        subject.name
-
-        option.dataset.id =
-        subject.id
-
-        subjectSelect.appendChild(
-            option
-        )
-    })
+window.location.href =
+'./pages/auth.html'
 }
-
-async function loadPresence() {
-
-    try {
-
-        const {
-            data,
-            error
-        } = await supabase
-
-            .from('live_presence')
-
-            .select(`
-                *,
-                profiles(username)
-            `)
-
-        if (error) {
-
-            console.error(error)
-
-            return
-        }
-
-        const users =
-        data.map(item => ({
-
-            username:
-            item.profiles?.username
-            || 'Unknown',
-
-            current_subject:
-            item.current_subject
-        }))
-
-        renderPresence(
-            presenceContainer,
-            users
-        )
-
-    } catch(err) {
-
-        console.error(err)
-    }
-}
-
-async function initialize() {
-
-    try {
-
-        const username =
-
-        await requestNotificationPermission()
-        getUsername()
-
-        if (!username) {
-
-            showLoginModal(
-                () => {
-                    location.reload()
-                }
-            )
-
-            return
-        }
-
-        await loadProfile(
-            username
-        )
-
-        await initializeSubjects()
-
-        await loadPresence()
-
-        subscribePresence(
-            loadPresence
-        )
-
-        welcomeText.innerText =
-        `Welcome ${username}`
-
-    } catch(err) {
-
-        console.error(err)
-
-        welcomeText.innerText =
-        'Initialization Failed'
-    }
-}
-
-startBtn.addEventListener(
-    'click',
-
-    async () => {
-
-        if (!currentProfile) {
-
-            alert(
-                'Profile Missing'
-            )
-
-            return
-        }
-
-        let duration = 25
-
-        const selected =
-        subjectSelect.options[
-            subjectSelect.selectedIndex
-        ]
-
-        const subject =
-        selected.value
-
-        const subjectId =
-        selected.dataset.id
-
-        if (
-            subject === 'Mathematics'
-        ) {
-            duration = 60
-        }
-
-        if (
-            subject === 'Reasoning'
-        ) {
-            duration = 45
-        }
-
-        if (
-            subject === 'English'
-        ) {
-            duration = 45
-        }
-
-        if (
-            subject === 'General Awareness'
-        ) {
-            duration = 25
-        }
-
-        await startPresence(
-            currentProfile.id,
-            subject
-        )
-
-        startPomodoro(
-
-            duration,
-
-            (remaining) => {
-
-                timerDisplay.innerText =
-                format(remaining)
-            },
-
-            async () => {
-
-                alert(
-                    'Session Completed'
-
-                showNotification(
-                    'SSC Warriors',
-                    'Study session completed'
-                )
-
-                )  
-                 
-                playAlarm()
-
-                stopPresence()
-
-                await saveSession({
-
-                    user_id:
-                    currentProfile.id,
-
-                    subject_id:
-                    subjectId,
-
-                    duration,
-
-                    note:
-                    `${subject} Session`
-                })
-            }
-        )
-    }
-)
-
-stopBtn.addEventListener(
-    'click',
-
-    () => {
-
-        stopPomodoro()
-
-        stopPresence()
-
-        timerDisplay.innerText =
-        '00:00'
-    }
-)
-
-initialize()
