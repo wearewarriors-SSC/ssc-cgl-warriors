@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Daily Challenges
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Daily Challenges
+    </h1>
+
+    <div id="challenges"></div>
+
+    <script type="module">
+
+        import {
+            requireAuth
+        }
+
+        from '../js/auth/session.js'
+
+        import {
+            getChallenges,
+            completeChallenge
+        }
+
+        from '../js/database/challenges.js'
+
+        const user =
+        await requireAuth()
+
+        async function loadChallenges() {
+
+            const challenges =
+            await getChallenges()
+
+            const container =
+            document.getElementById(
+                'challenges'
+            )
+
+            container.innerHTML = ''
+
+            challenges.forEach(
+                challenge => {
+
+                    const card =
+                    document.createElement(
+                        'div'
+                    )
+
+                    card.className =
+                    'presence-card'
+
+                    card.innerHTML = `
+
+                        <h3>
+                            ${challenge.title}
+                        </h3>
+
+                        Target:
+                        ${challenge.target}
+                        mins
+
+                        <br><br>
+
+                        <button
+                            data-id="${challenge.id}"
+                        >
+                            Complete
+                        </button>
+                    `
+
+                    card
+                    .querySelector(
+                        'button'
+                    )
+
+                    .addEventListener(
+
+                        'click',
+
+                        async () => {
+
+                            await completeChallenge({
+
+                                challenge_id:
+                                challenge.id,
+
+                                user_email:
+                                user.email,
+
+                                completed:
+                                true
+                            })
+
+                            alert(
+                                'Challenge completed!'
+                            )
+                        }
+                    )
+
+                    container.appendChild(
+                        card
+                    )
+                }
+            )
+        }
+
+        loadChallenges()
+
+    </script>
+
+</body>
+
+</html>
