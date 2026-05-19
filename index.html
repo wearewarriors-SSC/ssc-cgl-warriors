@@ -26,6 +26,16 @@ type="module"
 src="./js/app.js"
 ></script>
 
+<div class="bottom-nav">
+<div onclick="showTab('dashboard',document.querySelectorAll('.tab')[0])">🏠<span>Home</span></div>
+<div onclick="showTab('focus',document.querySelectorAll('.tab')[1])">⏱️<span>Focus</span></div>
+<div onclick="showTab('mocks',document.querySelectorAll('.tab')[3])">📊<span>Mocks</span></div>
+<div onclick="showTab('community',document.querySelectorAll('.tab')[6])">👥<span>Community</span></div>
+<div onclick="showTab('profile',document.querySelectorAll('.tab')[8])">👤<span>Profile</span></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="./js/charts.js"></script>
+<script type="module" src="./js/theme.js"></script>
 </body>
 
 </html>
