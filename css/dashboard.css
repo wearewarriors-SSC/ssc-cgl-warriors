@@ -213,3 +213,22 @@ border-radius: 16px;
 
 margin-top: 12px;
 }
+
+.logout-btn {
+
+position: fixed;
+
+top: 20px;
+
+right: 20px;
+
+background: crimson;
+
+color: white;
+
+padding: 12px;
+
+border-radius: 12px;
+
+cursor: pointer;
+}

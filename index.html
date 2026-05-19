@@ -4,430 +4,90 @@
 
 <head>
 
-    <title>
-        SSC CGL Warriors
-    </title>
+<title>
+SSC Warriors
+</title>
 
-    <link
-        rel="stylesheet"
-        href="./css/dashboard.css"
-    >
-
-    <link
-        rel="manifest"
-        href="./manifest.json"
-    >
+<link
+rel="stylesheet"
+href="./css/dashboard.css"
+>
 
 </head>
 
 <body>
 
-    <h1>
-        SSC CGL Warriors
-    </h1>
+<h1>
+SSC CGL Warriors
+</h1>
 
-    <div class="presence-card">
+<div class="presence-card">
 
-        <h2>
-            Navigation
-        </h2>
+<h2>
+Navigation
+</h2>
 
-        <div class="nav-grid">
+<div class="nav-grid"></div>
 
-            <a href="./pages/dashboard.html">
-                Dashboard
-            </a>
+</div>
 
-            <a href="./pages/mock-tests.html">
-                Mock Tests
-            </a>
+<div class="presence-card">
 
-            <a href="./pages/weak-topics.html">
-                Weak Topics
-            </a>
+<h2>
+Platform Overview
+</h2>
 
-            <a href="./pages/arena.html">
-                Live Arena
-            </a>
+<p>
 
-            <a href="./pages/revision.html">
-                Revision Planner
-            </a>
+Realtime SSC preparation ecosystem with:
 
-            <a href="./pages/analytics.html">
-                Analytics
-            </a>
+<br><br>
 
-        </div>
+✅ Analytics
 
-    </div>
+<br>
 
-    <div class="presence-card">
+✅ Study groups
 
-        <h2>
-            SSC Warrior Ecosystem
-        </h2>
+<br>
 
-        <p>
-            Realtime collaborative
-            SSC preparation platform
-            with analytics,
-            revision systems,
-            mock tracking,
-            AI insights,
-            productivity engines,
-            and competitive arenas.
-        </p>
+✅ Realtime chat
 
-    </div>
+<br>
 
-    <script>
+✅ Challenges
 
-    if (
-        'serviceWorker'
-        in navigator
-    ) {
+<br>
 
-        navigator.serviceWorker
-            .register(
-                './service-worker.js'
-            )
-    }
+✅ Streaks
 
-    </script>
+<br>
+
+✅ Notes
+
+<br>
+
+✅ Leaderboards
+
+<br>
+
+✅ Productivity systems
+
+</p>
+
+</div>
+
+<script type="module">
+
+import {
+buildNavigation
+}
+from './js/ui/navigation.js'
+
+buildNavigation()
+
+</script>
 
 </body>
 
 </html>
-
-<script>
-
-const nav =
-document.querySelector(
-    '.nav-grid'
-)
-
-const link =
-document.createElement('a')
-
-link.href =
-'./pages/leaderboard.html'
-
-link.innerText =
-'Leaderboard'
-
-nav.appendChild(link)
-
-</script>
-
-<script>
-
-const groupsLink =
-document.createElement('a')
-
-groupsLink.href =
-'./pages/groups.html'
-
-groupsLink.innerText =
-'Study Groups'
-
-document
-.querySelector('.nav-grid')
-.appendChild(groupsLink)
-
-</script>
-
-<script>
-
-const chatLink =
-document.createElement('a')
-
-chatLink.href =
-'./pages/chat.html'
-
-chatLink.innerText =
-'Group Chat'
-
-document
-.querySelector('.nav-grid')
-.appendChild(chatLink)
-
-</script>
-
-<script>
-
-const announceLink =
-document.createElement('a')
-
-announceLink.href =
-'./pages/announcements.html'
-
-announceLink.innerText =
-'Announcements'
-
-document
-.querySelector('.nav-grid')
-.appendChild(announceLink)
-
-</script>
-
-<script>
-
-const challengeLink =
-document.createElement('a')
-
-challengeLink.href =
-'./pages/challenges.html'
-
-challengeLink.innerText =
-'Daily Challenges'
-
-document
-.querySelector('.nav-grid')
-.appendChild(challengeLink)
-
-</script>
-
-<script>
-
-const streakLink =
-document.createElement('a')
-
-streakLink.href =
-'./pages/streaks.html'
-
-streakLink.innerText =
-'Study Streaks'
-
-document
-.querySelector('.nav-grid')
-.appendChild(streakLink)
-
-</script>
-
-<script>
-
-const profileLink =
-document.createElement('a')
-
-profileLink.href =
-'./pages/profile.html'
-
-profileLink.innerText =
-'Profile'
-
-document
-.querySelector('.nav-grid')
-.appendChild(profileLink)
-
-</script>
-
-<script>
-
-const friendsLink =
-document.createElement('a')
-
-friendsLink.href =
-'./pages/friends.html'
-
-friendsLink.innerText =
-'Study Friends'
-
-document
-.querySelector('.nav-grid')
-.appendChild(friendsLink)
-
-</script>
-
-<script>
-
-const notificationLink =
-document.createElement('a')
-
-notificationLink.href =
-'./pages/notifications.html'
-
-notificationLink.innerText =
-'Notifications'
-
-document
-.querySelector('.nav-grid')
-.appendChild(notificationLink)
-
-</script>
-
-<script>
-
-const activityLink =
-document.createElement('a')
-
-activityLink.href =
-'./pages/activity.html'
-
-activityLink.innerText =
-'Activity Feed'
-
-document
-.querySelector('.nav-grid')
-.appendChild(activityLink)
-
-</script>
-
-<script>
-
-const achievementLink =
-document.createElement('a')
-
-achievementLink.href =
-'./pages/achievements.html'
-
-achievementLink.innerText =
-'Achievements'
-
-document
-.querySelector('.nav-grid')
-.appendChild(achievementLink)
-
-</script>
-
-<script>
-
-const notesLink =
-document.createElement('a')
-
-notesLink.href =
-'./pages/notes.html'
-
-notesLink.innerText =
-'Study Notes'
-
-document
-.querySelector('.nav-grid')
-.appendChild(notesLink)
-
-</script>
-
-<script>
-
-const usersLink =
-document.createElement('a')
-
-usersLink.href =
-'./pages/users.html'
-
-usersLink.innerText =
-'User Directory'
-
-document
-.querySelector('.nav-grid')
-.appendChild(usersLink)
-
-const roomsLink =
-document.createElement('a')
-
-roomsLink.href =
-'./pages/rooms.html'
-
-roomsLink.innerText =
-'Study Rooms'
-
-document
-.querySelector('.nav-grid')
-.appendChild(roomsLink)
-
-</script>
-
-<script>
-
-const extraPages = [
-
-['History','./pages/history.html'],
-
-['Top Users','./pages/top-users.html'],
-
-['Focus Zone','./pages/focus.html'],
-
-['AI Recommendations','./pages/recommendations.html']
-
-]
-
-extraPages.forEach(item => {
-
-const link =
-document.createElement('a')
-
-link.href =
-item[1]
-
-link.innerText =
-item[0]
-
-document
-.querySelector('.nav-grid')
-.appendChild(link)
-
-})
-
-</script>
-
-<script>
-
-const ultraLinks = [
-
-['Study Timer','./pages/timer.html'],
-
-['Admin Panel','./pages/admin.html'],
-
-['Daily Motivation','./pages/quotes.html']
-
-]
-
-ultraLinks.forEach(item => {
-
-const link =
-document.createElement('a')
-
-link.href =
-item[1]
-
-link.innerText =
-item[0]
-
-document
-.querySelector('.nav-grid')
-.appendChild(link)
-
-})
-
-</script>
-
-<script>
-
-const finalPack = [
-
-['Weekly Goals','./pages/goals.html'],
-
-['Todo Manager','./pages/todos.html'],
-
-['SSC Countdown','./pages/countdown.html']
-
-]
-
-finalPack.forEach(item => {
-
-const link =
-document.createElement('a')
-
-link.href =
-item[1]
-
-link.innerText =
-item[0]
-
-document
-.querySelector('.nav-grid')
-.appendChild(link)
-
-})
-
-</script>
