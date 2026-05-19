@@ -87,6 +87,14 @@ Analytics
 <div class="tab" onclick="showTab('testseries',this)">Test Series</div>
 <div class="tab" onclick="showTab('library',this)">Library</div>
 <div class="tab" onclick="showTab('community',this)">Community</div>
+<div class="tab" onclick="showTab('realtime',this)">Realtime</div>
+<div class="tab" onclick="showTab('focusroom',this)">Focus Room</div>
+<div class="tab" onclick="showTab('advancedanalytics',this)">Adv Analytics</div>
+<div class="tab" onclick="showTab('leaderboardlive',this)">Live Leaderboard</div>
+<div class="tab" onclick="showTab('studypartner',this)">Study Partner</div>
+<div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
+<div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
+<div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -127,6 +135,14 @@ Analytics
 <div class="tab" onclick="showTab('testseries',this)">Test Series</div>
 <div class="tab" onclick="showTab('library',this)">Library</div>
 <div class="tab" onclick="showTab('community',this)">Community</div>
+<div class="tab" onclick="showTab('realtime',this)">Realtime</div>
+<div class="tab" onclick="showTab('focusroom',this)">Focus Room</div>
+<div class="tab" onclick="showTab('advancedanalytics',this)">Adv Analytics</div>
+<div class="tab" onclick="showTab('leaderboardlive',this)">Live Leaderboard</div>
+<div class="tab" onclick="showTab('studypartner',this)">Study Partner</div>
+<div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
+<div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
+<div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
 </div>
 
 <div class="tab"
@@ -182,6 +198,14 @@ Syllabus
 <div class="tab" onclick="showTab('testseries',this)">Test Series</div>
 <div class="tab" onclick="showTab('library',this)">Library</div>
 <div class="tab" onclick="showTab('community',this)">Community</div>
+<div class="tab" onclick="showTab('realtime',this)">Realtime</div>
+<div class="tab" onclick="showTab('focusroom',this)">Focus Room</div>
+<div class="tab" onclick="showTab('advancedanalytics',this)">Adv Analytics</div>
+<div class="tab" onclick="showTab('leaderboardlive',this)">Live Leaderboard</div>
+<div class="tab" onclick="showTab('studypartner',this)">Study Partner</div>
+<div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
+<div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
+<div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -222,6 +246,14 @@ Syllabus
 <div class="tab" onclick="showTab('testseries',this)">Test Series</div>
 <div class="tab" onclick="showTab('library',this)">Library</div>
 <div class="tab" onclick="showTab('community',this)">Community</div>
+<div class="tab" onclick="showTab('realtime',this)">Realtime</div>
+<div class="tab" onclick="showTab('focusroom',this)">Focus Room</div>
+<div class="tab" onclick="showTab('advancedanalytics',this)">Adv Analytics</div>
+<div class="tab" onclick="showTab('leaderboardlive',this)">Live Leaderboard</div>
+<div class="tab" onclick="showTab('studypartner',this)">Study Partner</div>
+<div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
+<div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
+<div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
 </div>
 
 </div>

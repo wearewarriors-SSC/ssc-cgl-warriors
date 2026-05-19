@@ -75,6 +75,14 @@ import { vault } from './components/vault.js'
 import { testseries } from './components/testseries.js'
 import { library } from './components/library.js'
 import { community } from './components/community.js'
+import { realtime } from './components/realtime.js'
+import { focusroom } from './components/focusroom.js'
+import { advancedanalytics } from './components/advancedanalytics.js'
+import { leaderboardlive } from './components/leaderboardlive.js'
+import { studypartner } from './components/studypartner.js'
+import { dailytarget } from './components/dailytarget.js'
+import { speedtracker } from './components/speedtracker.js'
+import { finalrevision } from './components/finalrevision.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -115,6 +123,14 @@ import { vault } from './components/vault.js'
 import { testseries } from './components/testseries.js'
 import { library } from './components/library.js'
 import { community } from './components/community.js'
+import { realtime } from './components/realtime.js'
+import { focusroom } from './components/focusroom.js'
+import { advancedanalytics } from './components/advancedanalytics.js'
+import { leaderboardlive } from './components/leaderboardlive.js'
+import { studypartner } from './components/studypartner.js'
+import { dailytarget } from './components/dailytarget.js'
+import { speedtracker } from './components/speedtracker.js'
+import { finalrevision } from './components/finalrevision.js'
 
 const {
 data
@@ -189,6 +205,14 @@ analytics()
 + testseries()
 + library()
 + community()
++ realtime()
++ focusroom()
++ advancedanalytics()
++ leaderboardlive()
++ studypartner()
++ dailytarget()
++ speedtracker()
++ finalrevision()
 + notifications()
 + friends()
 + achievements()
@@ -229,6 +253,14 @@ analytics()
 + testseries()
 + library()
 + community()
++ realtime()
++ focusroom()
++ advancedanalytics()
++ leaderboardlive()
++ studypartner()
++ dailytarget()
++ speedtracker()
++ finalrevision()
 
 window.showTab =
 (id,el) => {
