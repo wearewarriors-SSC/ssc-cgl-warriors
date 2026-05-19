@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Weak Topics Tracker
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <h1>
+        Weak Topics Tracker
+    </h1>
+
+    <form id="topicForm">
+
+        <input
+            id="topicName"
+            placeholder="Topic Name"
+        >
+
+        <br><br>
+
+        <select id="category">
+
+            <option value="QA">
+                Quantitative Aptitude
+            </option>
+
+            <option value="GI">
+                Reasoning
+            </option>
+
+            <option value="EL">
+                English
+            </option>
+
+            <option value="GA">
+                General Awareness
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Save Topic
+        </button>
+
+    </form>
+
+    <div id="topics"></div>
+
+    <script type="module">
+
+        import {
+            saveTopic,
+            getTopics
+        }
+
+        from '../js/database/topics.js'
+
+        async function renderTopics() {
+
+            const topics =
+            await getTopics(
+                'demo-user'
+            )
+
+            const container =
+            document.getElementById(
+                'topics'
+            )
+
+            container.innerHTML = ''
+
+            topics.forEach(topic => {
+
+                const item =
+                document.createElement(
+                    'div'
+                )
+
+                item.className =
+                'presence-card'
+
+                item.innerHTML = `
+
+                    <b>
+                        ${topic.topic_name}
+                    </b>
+
+                    <br>
+
+                    ${topic.category}
+                `
+
+                container.appendChild(
+                    item
+                )
+            })
+        }
+
+        document
+        .getElementById(
+            'topicForm'
+        )
+
+        .addEventListener(
+            'submit',
+
+            async event => {
+
+                event.preventDefault()
+
+                const topic_name =
+                document
+                .getElementById(
+                    'topicName'
+                ).value
+
+                const category =
+                document
+                .getElementById(
+                    'category'
+                ).value
+
+                await saveTopic({
+
+                    user_name:
+                    'demo-user',
+
+                    topic_name,
+
+                    category
+                })
+
+                renderTopics()
+            }
+        )
+
+        renderTopics()
+
+    </script>
+
+</body>
+
+</html>
