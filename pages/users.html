@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Directory</title>
+<link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<h1>User Directory</h1>
+
+<div id="users"></div>
+
+<script type="module">
+
+import {
+requireAuth
+}
+from '../js/auth/session.js'
+
+import {
+searchUsers,
+saveDirectoryUser
+}
+from '../js/database/directory.js'
+
+const user =
+await requireAuth()
+
+await saveDirectoryUser({
+
+user_email:
+user.email,
+
+username:
+user.email
+.split('@')[0]
+
+})
+
+async function loadUsers() {
+
+const users =
+await searchUsers()
+
+const container =
+document.getElementById(
+'users'
+)
+
+container.innerHTML = ''
+
+users.forEach(item => {
+
+const card =
+document.createElement('div')
+
+card.className =
+'presence-card'
+
+card.innerHTML = `
+
+<h3>
+${item.username}
+</h3>
+
+${item.user_email}
+
+`
+
+container.appendChild(card)
+
+})
+}
+
+loadUsers()
+
+</script>
+
+</body>
+</html>
