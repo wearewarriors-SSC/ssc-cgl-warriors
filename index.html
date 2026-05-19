@@ -24,6 +24,11 @@
         href="./css/globals.css"
     >
 
+     <link
+    rel="manifest"
+    href="./manifest.json"
+    >
+
 </head>
 
 <body>
@@ -96,6 +101,22 @@
         type="module"
         src="./js/app.js"
     ></script>
+
+     <script>
+
+if (
+    'serviceWorker'
+    in navigator
+) {
+
+    navigator.serviceWorker
+        .register(
+            './service-worker.js'
+        )
+}
+
+</script>
+
 
 </body>
 

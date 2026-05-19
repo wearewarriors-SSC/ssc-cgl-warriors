@@ -1,35 +1,50 @@
-import { storage }
+import {
+    saveLocal,
+    getLocal
+}
 from '../utils/storage.js'
 
-export function getDeviceId() {
+const USER_KEY =
+'ssc_username'
 
-    let id =
-    storage.get('device_id')
+const DEVICE_KEY =
+'ssc_device_id'
 
-    if (!id) {
+export function saveUsername(
+    username
+) {
 
-        id = crypto.randomUUID()
-
-        storage.set(
-            'device_id',
-            id
-        )
-    }
-
-    return id
+    saveLocal(
+        USER_KEY,
+        username
+    )
 }
 
 export function getUsername() {
 
-    return storage.get(
-        'username'
+    return getLocal(
+        USER_KEY,
+        null
     )
 }
 
-export function saveUsername(username) {
+export function getDeviceId() {
 
-    storage.set(
-        'username',
-        username
+    let deviceId =
+    getLocal(
+        DEVICE_KEY
     )
+
+    if (!deviceId) {
+
+        deviceId =
+        crypto.randomUUID()
+
+        saveLocal(
+            DEVICE_KEY,
+            deviceId
+        )
+    }
+
+    return deviceId
 }

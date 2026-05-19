@@ -45,6 +45,12 @@ import {
 from './ui/leaderboard.js'
 
 import {
+    requestNotificationPermission,
+    showNotification
+}
+from './ui/notifications.js'
+
+import {
     playAlarm
 }
 from './timer/timerAudio.js'
@@ -244,6 +250,8 @@ async function initialize() {
     try {
 
         const username =
+
+        await requestNotificationPermission()
         getUsername()
 
         if (!username) {
@@ -351,6 +359,12 @@ startBtn.addEventListener(
 
                 alert(
                     'Session Completed'
+
+                showNotification(
+                    'SSC Warriors',
+                    'Study session completed'
+                )
+
                 )  
                  
                 playAlarm()
