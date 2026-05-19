@@ -95,6 +95,9 @@ Analytics
 <div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
 <div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
 <div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
+<div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
+<div class="tab" onclick="showTab('userstats',this)">User Stats</div>
+<div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -143,6 +146,9 @@ Analytics
 <div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
 <div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
 <div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
+<div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
+<div class="tab" onclick="showTab('userstats',this)">User Stats</div>
+<div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
 </div>
 
 <div class="tab"
@@ -206,6 +212,9 @@ Syllabus
 <div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
 <div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
 <div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
+<div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
+<div class="tab" onclick="showTab('userstats',this)">User Stats</div>
+<div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -254,6 +263,9 @@ Syllabus
 <div class="tab" onclick="showTab('dailytarget',this)">Daily Target</div>
 <div class="tab" onclick="showTab('speedtracker',this)">Speed Tracker</div>
 <div class="tab" onclick="showTab('finalrevision',this)">Final Revision</div>
+<div class="tab" onclick="showTab('livefeed',this)">Live Feed</div>
+<div class="tab" onclick="showTab('userstats',this)">User Stats</div>
+<div class="tab" onclick="showTab('globalchat',this)">Global Chat</div>
 </div>
 
 </div>

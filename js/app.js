@@ -1,3 +1,4 @@
+import { loadMessages, subscribeChat } from './live.js'
 import { saveNote, addGoal, sendMessage, saveMock } from './realtime.js'
 import {
 supabase
@@ -84,6 +85,9 @@ import { studypartner } from './components/studypartner.js'
 import { dailytarget } from './components/dailytarget.js'
 import { speedtracker } from './components/speedtracker.js'
 import { finalrevision } from './components/finalrevision.js'
+import { livefeed } from './components/livefeed.js'
+import { userstats } from './components/userstats.js'
+import { globalchat } from './components/globalchat.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -132,6 +136,9 @@ import { studypartner } from './components/studypartner.js'
 import { dailytarget } from './components/dailytarget.js'
 import { speedtracker } from './components/speedtracker.js'
 import { finalrevision } from './components/finalrevision.js'
+import { livefeed } from './components/livefeed.js'
+import { userstats } from './components/userstats.js'
+import { globalchat } from './components/globalchat.js'
 
 const {
 data
@@ -214,6 +221,9 @@ analytics()
 + dailytarget()
 + speedtracker()
 + finalrevision()
++ livefeed()
++ userstats()
++ globalchat()
 + notifications()
 + friends()
 + achievements()
@@ -262,6 +272,9 @@ analytics()
 + dailytarget()
 + speedtracker()
 + finalrevision()
++ livefeed()
++ userstats()
++ globalchat()
 
 window.showTab =
 (id,el) => {
@@ -297,3 +310,87 @@ await supabase.auth.signOut()
 window.location.href =
 './pages/auth.html'
 }
+
+async function initializeGlobalChat(){
+
+const box =
+document.getElementById(
+'globalMessages'
+)
+
+if(!box) return
+
+const messages =
+await loadMessages()
+
+box.innerHTML = ''
+
+messages.forEach(msg => {
+
+box.innerHTML += `
+<p style="margin-top:10px">
+<strong>${msg.user_email}</strong>:
+${msg.message}
+</p>
+`
+
+})
+
+subscribeChat(msg => {
+
+box.innerHTML += `
+<p style="margin-top:10px">
+<strong>${msg.user_email}</strong>:
+${msg.message}
+</p>
+`
+
+})
+
+const btn =
+document.getElementById(
+'sendGlobalMessage'
+)
+
+if(btn){
+
+btn.onclick =
+async () => {
+
+const input =
+document.getElementById(
+'globalMessageInput'
+)
+
+const text =
+input.value
+
+if(!text) return
+
+const {
+supabase
+} =
+await import('./config/supabase.js')
+
+const {
+data:userData
+} =
+await supabase.auth.getUser()
+
+await supabase
+.from('chat_messages')
+.insert([{
+
+user_email:
+userData.user.email,
+
+message:text
+
+}])
+
+input.value = ''
+}
+}
+}
+
+initializeGlobalChat()
