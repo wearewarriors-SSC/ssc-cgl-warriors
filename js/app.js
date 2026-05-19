@@ -49,6 +49,12 @@ import { quotes } from './components/quotes.js'
 import { calendar } from './components/calendar.js'
 import { resources } from './components/resources.js'
 import { examtracker } from './components/examtracker.js'
+import { aiassistant } from './components/aiassistant.js'
+import { doubts } from './components/doubts.js'
+import { battles } from './components/battles.js'
+import { store } from './components/store.js'
+import { themes } from './components/themes.js'
+import { focusmusic } from './components/focusmusic.js'
 import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
@@ -63,6 +69,12 @@ import { quotes } from './components/quotes.js'
 import { calendar } from './components/calendar.js'
 import { resources } from './components/resources.js'
 import { examtracker } from './components/examtracker.js'
+import { aiassistant } from './components/aiassistant.js'
+import { doubts } from './components/doubts.js'
+import { battles } from './components/battles.js'
+import { store } from './components/store.js'
+import { themes } from './components/themes.js'
+import { focusmusic } from './components/focusmusic.js'
 
 const {
 data
@@ -111,6 +123,12 @@ analytics()
 + calendar()
 + resources()
 + examtracker()
++ aiassistant()
++ doubts()
++ battles()
++ store()
++ themes()
++ focusmusic()
 + notifications()
 + friends()
 + achievements()
@@ -125,6 +143,12 @@ analytics()
 + calendar()
 + resources()
 + examtracker()
++ aiassistant()
++ doubts()
++ battles()
++ store()
++ themes()
++ focusmusic()
 
 window.showTab =
 (id,el) => {

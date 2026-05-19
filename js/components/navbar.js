@@ -61,6 +61,12 @@ Analytics
 <div class="tab" onclick="showTab('calendar',this)">Calendar</div>
 <div class="tab" onclick="showTab('resources',this)">Resources</div>
 <div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
+<div class="tab" onclick="showTab('aiassistant',this)">AI Assistant</div>
+<div class="tab" onclick="showTab('doubts',this)">Doubts</div>
+<div class="tab" onclick="showTab('battles',this)">Battles</div>
+<div class="tab" onclick="showTab('store',this)">Store</div>
+<div class="tab" onclick="showTab('themes',this)">Themes</div>
+<div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -75,6 +81,12 @@ Analytics
 <div class="tab" onclick="showTab('calendar',this)">Calendar</div>
 <div class="tab" onclick="showTab('resources',this)">Resources</div>
 <div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
+<div class="tab" onclick="showTab('aiassistant',this)">AI Assistant</div>
+<div class="tab" onclick="showTab('doubts',this)">Doubts</div>
+<div class="tab" onclick="showTab('battles',this)">Battles</div>
+<div class="tab" onclick="showTab('store',this)">Store</div>
+<div class="tab" onclick="showTab('themes',this)">Themes</div>
+<div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
 </div>
 
 <div class="tab"
@@ -104,6 +116,12 @@ Syllabus
 <div class="tab" onclick="showTab('calendar',this)">Calendar</div>
 <div class="tab" onclick="showTab('resources',this)">Resources</div>
 <div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
+<div class="tab" onclick="showTab('aiassistant',this)">AI Assistant</div>
+<div class="tab" onclick="showTab('doubts',this)">Doubts</div>
+<div class="tab" onclick="showTab('battles',this)">Battles</div>
+<div class="tab" onclick="showTab('store',this)">Store</div>
+<div class="tab" onclick="showTab('themes',this)">Themes</div>
+<div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
@@ -118,6 +136,12 @@ Syllabus
 <div class="tab" onclick="showTab('calendar',this)">Calendar</div>
 <div class="tab" onclick="showTab('resources',this)">Resources</div>
 <div class="tab" onclick="showTab('examtracker',this)">Exam Tracker</div>
+<div class="tab" onclick="showTab('aiassistant',this)">AI Assistant</div>
+<div class="tab" onclick="showTab('doubts',this)">Doubts</div>
+<div class="tab" onclick="showTab('battles',this)">Battles</div>
+<div class="tab" onclick="showTab('store',this)">Store</div>
+<div class="tab" onclick="showTab('themes',this)">Themes</div>
+<div class="tab" onclick="showTab('focusmusic',this)">Focus Music</div>
 </div>
 
 </div>
