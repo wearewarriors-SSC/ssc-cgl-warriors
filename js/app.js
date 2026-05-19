@@ -39,6 +39,10 @@ import { notifications } from './components/notifications.js'
 import { friends } from './components/friends.js'
 import { achievements } from './components/achievements.js'
 import { settings } from './components/settings.js'
+import { notifications } from './components/notifications.js'
+import { friends } from './components/friends.js'
+import { achievements } from './components/achievements.js'
+import { settings } from './components/settings.js'
 
 const {
 data
@@ -73,6 +77,10 @@ analytics()
 + arena()
 + streaks()
 + challenges()
++ notifications()
++ friends()
++ achievements()
++ settings()
 + notifications()
 + friends()
 + achievements()

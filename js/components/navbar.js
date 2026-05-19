@@ -51,6 +51,10 @@ Analytics
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
 <div class="tab" onclick="showTab('settings',this)">Settings</div>
+<div class="tab" onclick="showTab('notifications',this)">Notifications</div>
+<div class="tab" onclick="showTab('friends',this)">Friends</div>
+<div class="tab" onclick="showTab('achievements',this)">Achievements</div>
+<div class="tab" onclick="showTab('settings',this)">Settings</div>
 </div>
 
 <div class="tab"
@@ -66,6 +70,10 @@ Syllabus
 <div class="tab" onclick="showTab('arena',this)">Arena</div>
 <div class="tab" onclick="showTab('streaks',this)">Streaks</div>
 <div class="tab" onclick="showTab('challenges',this)">Challenges</div>
+<div class="tab" onclick="showTab('notifications',this)">Notifications</div>
+<div class="tab" onclick="showTab('friends',this)">Friends</div>
+<div class="tab" onclick="showTab('achievements',this)">Achievements</div>
+<div class="tab" onclick="showTab('settings',this)">Settings</div>
 <div class="tab" onclick="showTab('notifications',this)">Notifications</div>
 <div class="tab" onclick="showTab('friends',this)">Friends</div>
 <div class="tab" onclick="showTab('achievements',this)">Achievements</div>
