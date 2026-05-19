@@ -41,3 +41,47 @@ button {
 
     margin-top: 10px;
 }
+
+.nav-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+    );
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.nav-grid a {
+
+    background:
+    #6366f1;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.nav-grid a:hover {
+
+    transform:
+    scale(1.03);
+
+    background:
+    #7c3aed;
+}

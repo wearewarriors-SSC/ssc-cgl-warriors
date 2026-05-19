@@ -1,122 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
     <title>
-        SSC CGL Warriors Arena
+        SSC CGL Warriors
     </title>
 
     <link
-        rel="icon"
-        href="./assets/favicon.ico"
+        rel="stylesheet"
+        href="./css/dashboard.css"
     >
 
     <link
-        rel="stylesheet"
-        href="./css/globals.css"
-    >
-
-     <link
-    rel="manifest"
-    href="./manifest.json"
+        rel="manifest"
+        href="./manifest.json"
     >
 
 </head>
 
 <body>
 
-    <div id="app">
+    <h1>
+        SSC CGL Warriors
+    </h1>
 
-        <h1>
-            SSC CGL Warriors Arena
-        </h1>
+    <div class="presence-card">
 
-        <p id="welcomeText">
-            Initializing...
-        </p>
+        <h2>
+            Navigation
+        </h2>
 
-        <div class="timer-card">
+        <div class="nav-grid">
 
-            <select id="subjectSelect">
+            <a href="./pages/dashboard.html">
+                Dashboard
+            </a>
 
-                <option value="Mathematics">
-                    Mathematics
-                </option>
+            <a href="./pages/mock-tests.html">
+                Mock Tests
+            </a>
 
-                <option value="Reasoning">
-                    Reasoning
-                </option>
+            <a href="./pages/weak-topics.html">
+                Weak Topics
+            </a>
 
-                <option value="English">
-                    English
-                </option>
+            <a href="./pages/arena.html">
+                Live Arena
+            </a>
 
-                <option value="General Awareness">
-                    General Awareness
-                </option>
+            <a href="./pages/revision.html">
+                Revision Planner
+            </a>
 
-            </select>
-
-            <h2 id="timerDisplay">
-                25:00
-            </h2>
-
-            <div class="buttons">
-
-                <button id="startBtn">
-                    Start
-                </button>
-
-                <button id="stopBtn">
-                    Stop
-                </button>
-
-            </div>
-
-        </div>
-
-        <div class="presence-wrapper">
-
-            <h2>
-                Live Battleground
-            </h2>
-
-            <div
-                id="presenceContainer"
-            ></div>
+            <a href="./pages/analytics.html">
+                Analytics
+            </a>
 
         </div>
 
     </div>
 
-    <script
-        type="module"
-        src="./js/app.js"
-    ></script>
+    <div class="presence-card">
 
-     <script>
+        <h2>
+            SSC Warrior Ecosystem
+        </h2>
 
-if (
-    'serviceWorker'
-    in navigator
-) {
+        <p>
+            Realtime collaborative
+            SSC preparation platform
+            with analytics,
+            revision systems,
+            mock tracking,
+            AI insights,
+            productivity engines,
+            and competitive arenas.
+        </p>
 
-    navigator.serviceWorker
-        .register(
-            './service-worker.js'
-        )
-}
+    </div>
 
-</script>
+    <script>
 
+    if (
+        'serviceWorker'
+        in navigator
+    ) {
+
+        navigator.serviceWorker
+            .register(
+                './service-worker.js'
+            )
+    }
+
+    </script>
 
 </body>
 
