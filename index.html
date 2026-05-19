@@ -34,9 +34,61 @@
             SSC CGL Warriors Arena
         </h1>
 
-        <p>
-            Secure realtime study engine initialized.
+        <p id="welcomeText">
+            Initializing...
         </p>
+
+        <div class="timer-card">
+
+            <select id="subjectSelect">
+
+                <option value="Mathematics">
+                    Mathematics
+                </option>
+
+                <option value="Reasoning">
+                    Reasoning
+                </option>
+
+                <option value="English">
+                    English
+                </option>
+
+                <option value="General Awareness">
+                    General Awareness
+                </option>
+
+            </select>
+
+            <h2 id="timerDisplay">
+                25:00
+            </h2>
+
+            <div class="buttons">
+
+                <button id="startBtn">
+                    Start
+                </button>
+
+                <button id="stopBtn">
+                    Stop
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="presence-wrapper">
+
+            <h2>
+                Live Battleground
+            </h2>
+
+            <div
+                id="presenceContainer"
+            ></div>
+
+        </div>
 
     </div>
 
