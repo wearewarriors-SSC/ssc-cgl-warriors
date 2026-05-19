@@ -25,6 +25,10 @@ from './components/analytics.js'
 import { mocks } from './components/mocks.js'
 import { syllabus } from './components/syllabus.js'
 import { leaderboard } from './components/leaderboard.js'
+import { notes } from './components/notes.js'
+import { goals } from './components/goals.js'
+import { todos } from './components/todos.js'
+import { chat } from './components/chat.js'
 
 const {
 data
@@ -49,6 +53,10 @@ analytics()
 + mocks()
 + syllabus()
 + leaderboard()
++ notes()
++ goals()
++ todos()
++ chat()
 
 window.showTab =
 (id,el) => {

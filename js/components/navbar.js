@@ -37,11 +37,19 @@ Analytics
 <div class="tab" onclick="showTab('leaderboard',this)">Leaderboard</div>
 <div class="tab" onclick="showTab('mocks',this)">Mocks</div>
 <div class="tab" onclick="showTab('syllabus',this)">Syllabus</div>
+<div class="tab" onclick="showTab('notes',this)">Notes</div>
+<div class="tab" onclick="showTab('goals',this)">Goals</div>
+<div class="tab" onclick="showTab('todos',this)">Todos</div>
+<div class="tab" onclick="showTab('chat',this)">Chat</div>
 </div>
 
 <div class="tab"
 onclick="showTab('syllabus',this)">
 Syllabus
+<div class="tab" onclick="showTab('notes',this)">Notes</div>
+<div class="tab" onclick="showTab('goals',this)">Goals</div>
+<div class="tab" onclick="showTab('todos',this)">Todos</div>
+<div class="tab" onclick="showTab('chat',this)">Chat</div>
 </div>
 
 </div>
